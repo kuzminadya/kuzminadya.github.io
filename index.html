@@ -34,8 +34,9 @@
 </head>
 
 <body>
+	<div id="elm"></div>
 	<script src="assets/main.min.js"></script>
-	<script>Elm.Main.fullscreen()</script>
+	<script>Elm.Main.init({ node: document.getElementById('elm') })</script>
 </body>
 
 </html>
