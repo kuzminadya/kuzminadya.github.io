@@ -150,7 +150,7 @@ view { position, size } =
             [ text "Hi, I’m Nadya Kuzmina. I study interface design at the University of Applied Sciences in Potsdam. You can find me on "
             , a [ href "https://github.com/kuzminadya" ] [ text "github" ]
             , text ", "
-            , a [ href "https://twitter.com/nadya_nabl" ] [ text "twitter" ]
+            , a [ href "https://twitter.com/nadyakzmn" ] [ text "twitter" ]
             , text ", "
             , a [ href "https://www.instagram.com/doublnabl" ] [ text "instagram" ]
             , text " or contact me by "
