@@ -8,11 +8,9 @@ body{
 }
 
 .container {
-    /* height: 100%; */
-
     display: grid;
     grid-template-columns:
-        [first] 50px 
+        [first] 1fr 
         [line2] 1fr
         [line3] 1fr
         [line4] 1fr 
@@ -24,7 +22,7 @@ body{
         [line10] 1fr 
         [line11] 1fr 
         [line12] 1fr
-        [line13] 50px  
+        [line13] 1fr  
         [end];
     grid-gap: 20px;
     grid-auto-rows: minmax(50px, auto);
@@ -119,7 +117,6 @@ img.first-sprite-img{
 }
 
 .sketches{
-    /* grid-column: line2 / 7; */
     grid-row: 5;
 }
 
@@ -128,7 +125,6 @@ img.main-img{
 }
 
 .png-sprite{
-    /* grid-column: line2 / 7; */
     grid-row: 6;
 }
 
@@ -139,19 +135,11 @@ img.main-img{
     grid-row-end: 10;
 }
 
-/* .vsc-game{
-    grid-column-start: line10;
-    grid-column-end: line12;
-    grid-row: 7;
-} */
-
 .code{
-    /* grid-column: line2 / 7; */
     grid-row: 7;
 }
 
 .kerning{
-    /* grid-column: line2 / 7; */
     grid-row: 8;
 }
 
@@ -163,30 +151,34 @@ img.main-img{
 }
 
 .elm-package{
-    /* grid-column: line2 / 7; */
     grid-row: 9;
 }
 
 .demo{
-    /* grid-column: line2 / 7; */
     grid-row: 10; 
 }
 
-iframe.font-test{
-    height: 281px;
-    width: 100%;
+.font-test-iframe{
+    grid-column-start: line2;
+    grid-column-end: line9;
+    grid-row: 11;
+    position: relative;
+    padding-bottom: 50%;
 }
 
-.cyr{
-    grid-column-start: line8;
-    grid-column-end: line12;
-    grid-row-start: 11;
-    grid-row-end: 13;
+.font-test-iframe > iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 .fin{
-    /* grid-column: line2 / 7; */
-    grid-row: 11; 
+    grid-row: 12; 
     margin-bottom: 60px;
 }
 
@@ -196,8 +188,83 @@ iframe.font-test{
     }   
 }
 
-@media screen and (max-width: 900px) {
-    .text-width{
-        grid-column: line2 / 12;
+@media screen and (max-width: 800px) {
+    .mogee-iframe {
+        grid-column: line2 / 10;
+        grid-row: 3;
     }   
+    .game-caption{
+        grid-column: line2 / 9;
+        grid-row: 4;
+    }
+
+    .itch{
+        grid-column: line2 / 10;
+        grid-row: 5;
+    }
+    
+    .first-sprite{
+        grid-column: line2 / 10;
+        grid-row: 6;
+    }
+    
+    .first-sprite-figure{
+        grid-column: line2 / 10;
+        grid-row: 6;
+
+    }
+    
+    img.first-sprite-img{
+        height: 100%;
+        width: 100%;
+        min-width: 180px;
+    }
+    
+    .sketches{
+        grid-row: 7;
+    }
+    
+    img.main-img{
+        width: 100%;
+    }
+    
+    .png-sprite{
+        grid-row: 8;
+    }
+    
+    .vsc-list-glyphs{
+        display: none;
+    }
+    
+    .code{
+        grid-row: 9;
+    }
+    
+    .kerning{
+        grid-row: 10;
+    }
+    
+    .vsc-code{
+        grid-row: 11;
+    }
+    
+    .elm-package{
+        grid-row: 11;
+    }
+    
+    .demo{
+        grid-row: 12; 
+    }
+
+    .font-test-iframe{
+        grid-column-start: line2;
+        grid-column-end: line13;
+        grid-row: 13;
+        position: relative;
+        padding-bottom: 50%;
+    }
+    
+    .fin{
+        grid-row: 14;
+    }
 }
