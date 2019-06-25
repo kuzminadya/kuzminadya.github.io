@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scrollama Boardgame test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../lib/d3.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="intro">
+        <h1>DIVERSITÄT IN BRETTSPIELEN</h1>
+        <p>
+          Spiele sind etwas Besonderes. Sie geben das Versprechen, andere Welten
+          zu erleben, Dinge zu können, die man im realen Leben nicht kann,
+          jemand anderes zu sein. Doch häufig können Spiele dieses Versprechen
+          nur halten, wenn man in der ein oder anderen Form ein weißer Mann sein
+          möchte. Viel zu häufig gibt es keine Frauen oder Menschen mit
+          Trans*Identität, keine People of Color oder Menschen, die von
+          verbreiteten Schönheitsidealen abweichen. Was macht man, wenn man als
+          weißer Mann im Spiel nicht weiß und männlich sein möchte oder also
+          nicht-weiße, nicht-männliche Person vorhatte, „sich selbst” zu
+          spielen?
+          <br />
+          <br />
+          Wir haben uns den Brettspielemarkt angesehen um herauszufinden, wer
+          eigentlich mitspielen darf und wie vielfältig die vielen verschiedenen
+          Welten der Spiele tatsächlich sind. Grundlage hierfür sind die 50
+          bestbewerteten Spiele des Forums boardgamegeek.com, der größten
+          Plattform für Spiele weltweit, sowie alle Spiele, die seit 1979 mit
+          dem Preis des „Spiel des Jahres” ausgezeichnet wurden.
+        </p>
+        <h3>Crowdfunding</h3>
+        <p class="p-intro">
+          Die wahrscheinlich größte Neuerung auf dem Spielemarkt sind Spiele aus
+          Crowdfoundingkampagnen. Schaut man sich die Top50 Spiele auf
+          boardgamegeek an, wurde ein Drittel auf diesem Weg finanziert. Über
+          Plattformen wie Kickstarter und Startnext liefen bereits über 3500
+          Projekte, um neue Spiele zu finanzieren. Mit Exploding Kittens ist
+          sogar ein Spiel unter den Top10 der erfolgreichsten Kampagnen
+          überhaupt. Bereits vor Verkaufsstart kamen knapp 9 Millionen US$
+          zusammen. Die Entwicklung weg von großen Verlagen hin zu direkt von
+          Spieler*innen finanzierten Spielen hat den Markt drastisch verändert.
+          Hohe Verkaufszahlen einzelner Titel wie Monopoly, Risiko oder Trivial
+          Pursuit gehören der Vergangenheit an. Stattdessen gibt es immer
+          schneller, immer mehr Spiele in kleineren Auflagen. Doch diese
+          steigende Vielfalt spiegelt sich bislang nur zum Teil in den
+          Charakteren der Spiele wieder.
+        </p>
+      </section>
+
+      <section class="crowdfunding">
+        <img src="img/bbg.png" />
+        <img src="img/SDJ.png" />
+      </section>
+
+      <section id="scrolly">
+        <article>
+          <h3>Wird in der Anleitung gegendert?</h3>
+          <p>
+            Bevor es mit dem Spielen losgeht, muss erstmal die Anleitung gelesen
+            werden. Hier stellt sich die Frage, an wen sich die Verlage richten.
+            Sind es Spieler, Spielerinnen oder Spieler*innen? Häufig liest man
+            am Beginn der Anleitung, als Spielerin* sei man „mitgemeint”, aber
+            warum nicht ausschreiben? Längst sind Leser*Innen es aus Zeitungen,
+            Büchern und anderen Publikationen gewohnt. Oder man macht es
+            andersrum und schreibt zur Abwechslung einfach nur Spielerinnen und
+            schafft es damit, wie das Spiel Jorvik, zumindest darüber ins
+            Gespräch zu kommen, wie es sich anfühlt, „mitgemeint” zu sein.
+          </p>
+          <div class="step zero" data-step="0"></div>
+          <div id="svgPercentage"></div>
+          <h2 class="char-h2">Charaktere</h2>
+          <div class=" gallerySvgCharacters">
+            <div class="step category" data-step="1">
+              <svg
+                id="gallerySvgCharM"
+                class="SvgCharClass"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 1000 600"
+              ></svg>
+              <p class="no-padding">
+                Nachdem man die Anleitung gelesen hat steht man häufig vor der
+                Frage wen man spielen möchte oder bekommt einen Charakter
+                zugelost. Männer gibt es dabei praktisch immer, Frauen seltener
+                und Trans*Menschen so gut wie nie, es sei denn es gibt Aliens.
+                Guckt man sich die Charaktere genauer an hat man es dann auch
+                häufig mit sehr stereotype Darstellungen zu tun. Männer sind
+                gute Kämpfer und Frauen unterstützen z.b. als Heilerin.
+              </p>
+            </div>
+            <div class="step category" data-step="2">
+              <svg
+                id="gallerySvgCharW"
+                class="SvgCharClass"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 1000 600"
+              ></svg>
+              <p class="no-padding">
+                Ist man dann noch nicht-weiß, hat man geringe Chancen, im Spiel
+                vertreten zu sein. Kaum ein Spiel bietet die Möglichkeit, People
+                of Color zu spielen. Die Gründe hierfür sind sicherlich
+                vielfältig. Zum einen sind praktisch alle Spieleautor*innen
+                weiß, ähnlich sieht es bei den Käufer*innen aus. Hinzu kommt das
+                Phänomen, dass viele Spiele eurozentristisch sind und People of
+                Color beispielsweise im Mittelalter in Europa kaum vertreten
+                waren. Spieleverlage begründen deren Abwesenheit mit diesem
+                historischen Aspekt, wobei die Anwesenheit von Vampiren, Zombies
+                und Magie offenbar kein Problem ist.
+              </p>
+            </div>
+            <div class="step category" data-step="3">
+              <svg
+                id="gallerySvgCharB"
+                class="SvgCharClass"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 1000 600"
+              ></svg>
+              <p class="no-padding">
+                Ein weniger offensichtliches Problem ist die Frage der
+                „Normschönheit”. Anscheinend ist es einfach normal, dass alle
+                Figuren, genau wie in praktisch jedem Film und jeder Serie,
+                aussehen wie Models. Alle sind fit, haben definierte Körper,
+                volles Haar und stereotyp schöne Gesichter. Aber muss das
+                wirklich so sein? Braucht es dieses Aussehen, um in fremden
+                Welten bestehen zu können? Häufig sicher nicht.
+              </p>
+            </div>
+          </div>
+          <div class="mention">
+            <p class="no-margins">honorable mention Winziges Verlies</p>
+          </div>
+          <div class="authors">
+            <p class="no-padding">
+              Ein Grund für das sehr überschaubare Angebot an Charakteren ist
+              sicherlich die ebenfalls überschaubare Diversität bei Autor*innen
+              und Illustrator*innen. Männer dominieren mit großem Vorsprung den
+              Markt, die große Mehrheit ist weiß und aus Europa. Bei den
+              Illustrator*innen gibt es einige wenige Ausnahmen. Eine
+              Veränderung ist in beiden Fällen allerdings kaum zu beobachten.
+            </p>
+            <h2 class="no-padding">Autor*innen</h2>
+            <div class="step game-boxes" data-step="4">
+              <figure class="game-boxes">
+                <div id="tooltipAuth"></div>
+                <svg
+                  id="gallerySvgAuthor"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 1100 600"
+                ></svg>
+              </figure>
+            </div>
+            <h2 class="no-padding">Illustrator*innen</h2>
+            <div class="step" data-step="5">
+              <figure class="game-boxes">
+                <div class="tooltip"></div>
+                <svg
+                  id="gallerySvgIllustrators"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 1100 600"
+                ></svg>
+              </figure>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- <section class="crowdfunding">
+        <p>
+          Place for the new graph
+        </p>
+      </section> -->
+      <section class="conclusion">
+        <h2>FAZIT</h2>
+        <p>
+          Zusammenfassend kann man sagen, dass die Spielewelt von weißen Männern
+          dominiert wird. Sie entwickeln, illustrieren, spielen, schreiben
+          Rezensionen und vergeben Preise. Es gibt aber Ausnahmen, die hoffen
+          lassen - Spiele mit vielen und unterschiedlichsten Charakteren, aus
+          denen die Liebe zum Detail und der Wille, alle mitspielen zu lassen,
+          spricht. Es ist außerdem ein klarer Trend hin zu kleineren Verlagen
+          und Auflagen zu erkennen. Diese Entwicklung wird sicher auch weiterhin
+          dafür sorgen, dass Spiele diverser werden. Allerdings wird es wohl
+          noch einige Zeit brauchen, bis große Verlage den Schritt zu diverseren
+          Charakteren gehen. Bis dahin hält einen niemand davon ab, eigenhändig
+          nachzubessern oder vor dem Kauf zu schauen, ob man überhaupt in der
+          gezeigten Welt sein möchte.
+        </p>
+      </section>
+    </main>
+  </body>
+  <!-- <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script> -->
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="lib/stickyfill.min.js"></script>
+  <script src="lib/scrollama.min.js"></script>
+  <script src="/script.js"></script>
+</html>

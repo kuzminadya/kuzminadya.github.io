@@ -1,0 +1,51 @@
+Number,NameID,Name,image_path,Erscheinungsjahr,menschliche_Darstellungen,Nicht_männliche_C,Nichtweiße_C,Nicht_normschön,Anleitung_gegendert,Autor*innen?,AutorM,AutorW,Illustrator*innen,IllustrM,IllustrW,xcoordinate,ycoordinate,xcoordinate2,ycoordinate2
+1,Gloomhaven,Gloomhaven,images/Gloomhaven.jpg,2017,ja,ja,ja,x,nein,m,1,0,mmm,3,0,0,0,0,0
+2,Pandemic_Legacy:_Season_1,Pandemic Legacy: Season 1,images/PandemicLegacy Season1.jpg,2015,ja,ja,ja,nein,nein,m,1,0,mm,4,0,100,0,220,0
+3,Through_the_Ages:_A_New_Story_of_Civilization,Through the Ages: A New Story of Civilization,images/ThroughtheAgesANewStoryofCivilization.jpg,2015,ja,ja,nein,nein,nein,m,1,0,mmmm,4,0,200,0,440,0
+4,Terraforming_Mars,Terraforming Mars,images/TerraformingMars.jpg,2016,ja,ja,ja,ja,nein,m,1,0,m,1,0,300,0,660,0
+5,Twilight_Struggle,Twilight Struggle,images/TwilightStruggle.jpg,2005,ja,ja,ja,ja,nein,mm,2,0,mmmmm,5,0,400,0,880,0
+6,Star_Wars:_Rebellion,Star Wars: Rebellion,images/StarWarsRebellion.jpg,2016,ja,ja,ja,nein,nein,m,1,0,48 m u. w,24,24,500,0,1080,0
+7,Gaia_Project,Gaia Project,images/GaiaProject.jpg,2017,nein,x,x,x,nein,mm,2,0,m,1,0,600,0,1280,0
+8,Scythe,Scythe,images/Scythe.jpg,2016,ja,ja,ja,nein,nein,m,1,0,m,1,0,700,0,1480,0
+9,Twilight_Imperium_Fourth_Edition,Twilight Imperium (Fourth Edition),images/TwilightImperium.jpg,2017,ja,ja,x,x,nein,mmm,3,0,m,1,0,800,0,1680,0
+10,Great_Western_Trail,Great Western Trail,images/GreatWesternTrail.jpg,2016,ja,nein,nein,nein,nein,m,1,0,m,1,0,900,0,1880,0
+11,Terra_Mystica,Terra Mystica,images/TerraMystica.jpg,2012,ja,ja,ja,x,nein,,,,,,,0,100,0,220
+12,War_of_the_Ring_(Second_Edition),War of the Ring (Second Edition),images/WaroftheRing.jpg,2012,ja,ja,ja,nein,nein,,,,,,,100,100,220,220
+13,The_Castles_of_Burgundy,The Castles of Burgundy,images/TheCastlesofBurgundy.jpg,2011,ja,ja,nein,nein,nein,,,,,,,200,100,440,220
+14,Brass:_Birmingham,Brass: Birmingham,images/BrassBirmingham.jpg,2018,ja,ja,ja,ja,nein,,,,,,,300,100,660,220
+15,Spirit_Island,Spirit Island,images/SpiritIsland.jpg,2017,ja,ja,ja,ja,nein,,,,,,,400,100,880,220
+16,7_Wonders_Duel,7 Wonders Duel,images/7WondersDuel.jpg,2015,ja,ja,ja,nein,nein,,,,,,,500,100,1080,220
+17,The_7th_Continent,The 7th Continent,images/The7thContinent.jpg,2017,nein,x,x,x,nein,,,,,,,600,100,1280,220
+18,Concordia,Concordia,images/Concordia.jpg,2013,ja,ja,ja,nein,nein,,,,,,,700,100,1480,220
+19,Viticulture_Essential_Edition,Viticulture Essential Edition,images/Viticulture.jpg,2015,ja,ja,x,x,nein,,,,,,,800,100,1680,220
+20,Arkham_Horror:_The_Card_Game,Arkham Horror: The Card Game,images/ArkhamHorrorTheCardGame.jpg,2016,ja,nein,nein,nein,nein,,,,,,,900,100,1880,220
+21,Puerto_Rico,Puerto Rico,images/PuertoRico.jpg,2002,ja,ja,ja,nein,nein,,,,,,,0,200,0,420
+22,Brass:_Lancashire,Brass: Lancashire,images/BrassLancashire.jpg,2007,nein,x,x,x,nein,,,,,,,100,200,220,420
+23,Caverna:_The_Cave_Farmers,Caverna: The Cave Farmers,images/CavernaTheCaveFarmers.jpg,2013,ja,ja,ja,nein,nein,,,,,,,200,200,440,420
+24,Mage_Knight_Board_Game,Mage Knight Board Game,images/MageKnightBoardGame.jpg,2011,ja,ja,x,x,nein,,,,,,,300,200,660,420
+25,Agricola,Agricola,images/Agricola.jpg,2007,ja,nein,nein,nein,nein,,,,,,,400,200,880,420
+26,Orléans,Orléans,images/Orleans.jpg,2014,ja,ja,ja,x,nein,,,,,,,500,200,1080,420
+27,Mansions_of_Madness:_Second_Edition,Mansions of Madness: Second Edition,images/MansionofMadnessSecondEdition.jpg,2016,ja,ja,ja,nein,nein,,,,,,,600,200,1280,420
+28,A_Feast_for_Odin,A Feast for Odin,images/AFeastforOdin.jpg,2016,ja,ja,nein,nein,nein,,,,,,,700,200,1480,420
+29,Food_Chain_Magnate,Food Chain Magnate,images/FoodChainMagnate.jpg,2015,ja,ja,ja,ja,nein,,,,,,,800,200,1680,420
+30,Blood_Rage,Blood Rage,images/BloodRage.jpg,2015,nein,x,x,x,nein,,,,,,,900,200,1880,420
+31,Pandemic_Legacy:_Season_2,Pandemic Legacy: Season 2,images/PandemicLegacySeason2.jpg,2017,ja,ja,ja,nein,nein,,,,,,,0,300,0,620
+32,Mechs_vs._Minions,Mechs vs. Minions,images/MechsvsMinions.jpg,2016,ja,ja,x,x,nein,,,,,,,100,300,220,620
+33,Kingdom_Death:_Monster,Kingdom Death: Monster,images/KingdomDeathMonster.jpg,2015,ja,nein,nein,nein,nein,,,,,,,200,300,440,620
+34,Star_Wars:_Imperial_Assault,Star Wars: Imperial Assault,images/StarWarsImperial Assault.jpg,2014,ja,ja,ja,nein,nein,,,,,,,300,300,660,620
+35,Through_the_Ages:_A_Story_of_Civilization2,Through the Ages: A Story of Civilization,images/ThroughtheAgesAStoryofCivilisation2.jpg,2006,nein,x,x,x,nein,,,,,,,400,300,880,620
+36,Power_Grid,Power Grid,images/PowerGrid.jpg,2004,ja,ja,ja,nein,nein,,,,,,,500,300,1080,620
+37,Tzolk'in:_The_Mayan_Calendar,Tzolk'in: The Mayan Calendar,images/TzolkinTheMayanCalendar.jpg,2012,ja,ja,x,x,nein,,,,,,,600,300,1280,620
+38,Azul,Azul,images/Azul.jpg,2017,ja,nein,nein,nein,nein,,,,,,,700,300,1480,620
+39,Eclipse,Eclipse,images/Eclipse.jpg,2011,ja,ja,ja,x,nein,,,,,,,800,300,1680,620
+40,Le_Havre,Le Havre,images/LeHavre.jpg,2008,ja,ja,ja,nein,nein,,,,,,,900,300,1880,620
+41,Robinson_Crusoe:_Adventures_on_the_Cursed_Island,Robinson Crusoe: Adventures on the Cursed Island,images/RobinsonCrusoe AdventuresontheCursedIsland.jpg,2012,ja,ja,nein,nein,nein,,,,,,,0,400,0,820
+42,The_Voyages_of_Marco_Polo,The Voyages of Marco Polo,images/TheVoyagesofMarcoPolo.jpg,2015,ja,ja,ja,nein,nein,,,,,,,100,400,220,820
+43,Clans_of_Caledonia,Clans of Caledonia,images/ClansofCaledonia.jpg,2017,ja,ja,x,x,nein,,,,,,,200,400,440,820
+44,Android:_Netrunner,Android: Netrunner,images/AndroidNetrunner.jpg,2012,ja,nein,nein,nein,nein,,,,,,,300,400,660,820
+45,7_Wonders,7 Wonders,images/7Wonders.jpg,2010,ja,ja,ja,x,nein,,,,,,,400,400,880,820
+46,Keyflower,Keyflower,images/Keyflower.jpg,2012,ja,ja,ja,nein,nein,,,,,,,500,400,1080,820
+47,Wingspan,Wingspan,images/Wingspan.jpg,2019,ja,ja,nein,nein,nein,,,,,,,600,400,1280,820
+48,Anachrony,Anachrony,images/Anachrony.jpg,2017,ja,ja,ja,x,nein,,,,,,,700,400,1480,820
+49,Race_for_the_Galaxy,Race for the Galaxy,images/RacefortheGalaxy.jpg,2007,ja,ja,ja,nein,nein,,,,,,,800,400,1680,820
+50,Caylus,Caylus,images/Caylus.jpg,2005,ja,ja,nein,nein,nein,,,,,,,900,400,1880,820

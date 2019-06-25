@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* @font-face {
+  font-family: "Infini";
+  src: url("fonts/infini-romain.otf") format("opentype")
+  } */
+
+@font-face {
+  font-family: "Fjalla_One";
+  src: url("fonts/Fjalla_One/FjallaOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM_Plex_Sans";
+  src: url("fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IBM_Plex_Serif";
+  src: url("fonts/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf") format("truetype");
+}
+
+body {
+  /* font-family: 'Work Sans', sans-serif; */
+  font-family: "IBM_Plex_Sans", sans-serif;
+  /* font-family: 'IBM_Plex_Serif', serif; */
+  color: #161116;
+  /* background-color: #060857; */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#tooltipAuth {
+  position: absolute;
+  visibility: hidden;
+  padding: 3rem;
+  background: #ededed;
+  border-radius: 4px;
+  pointer-events: none;
+  /* font-family: sans-serif; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding: 0 20vw 2rem 15vw;
+}
+
+h1 {
+  font-family: "Fjalla_One", sans-serif;
+  color: #161116;
+  -webkit-text-stroke: 0.1px #161116;
+  /* text-stroke: .5px #161116; */
+  font-size: 90px;
+  text-align: start;
+  margin: 0;
+  line-height: 1.2;
+  margin: 5rem 0;
+}
+
+h2 {
+  /* font-family: 'Infini', sans-serif; */
+  font-family: "Fjalla_One", sans-serif;
+  color: #a57c1b;
+  /* color: #161116; */
+  font-size: 40px;
+  text-align: start;
+  margin: 0;
+  font-style: normal;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+h3 {
+  font-family: "Fjalla_One", sans-serif;
+  color: #a57c1b;
+  /* color: #161116; */
+  font-size: 20px;
+  text-align: start;
+  margin: 0;
+  font-style: normal;
+  padding-left: 2rem;
+}
+
+#intro {
+  /* padding: 0 10rem; */
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+p {
+  text-align: start;
+  padding: 2.5rem 0 2.5rem 10rem;
+  max-width: 50rem;
+}
+
+section.crowdfunding {
+  padding: 0 0 4rem 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+}
+
+img {
+  display: inline-block;
+  align-self: center;
+}
+
+article {
+  position: relative;
+}
+
+figure {
+  margin: 0;
+}
+
+/* .is-active {
+  filter: grayscale(100%);
+} */
+
+#scrolly {
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+.zero {
+  font-family: "Fjalla_One", sans-serif;
+  color: #161116;
+  font-size: 140px;
+  text-align: center;
+  margin: 0;
+  font-style: bold;
+  line-height: 1.2;
+}
+
+article {
+  padding: 0 20vw 0 15vw;
+}
+
+.instruction {
+  padding: 0 20vw 0 15vw;
+}
+
+p.no-margins {
+  margin: 0;
+}
+
+p.no-padding {
+  padding: 0;
+}
+
+.char-h2 {
+  background-color: #161116;
+  margin: 0 -20vw 0 -15vw;
+  padding-left: 15vw;
+}
+
+.gallerySvgCharacters {
+  margin: 0 -20vw 0 -15vw;
+  background-color: #161116;
+  color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  margin-bottom: 0;
+}
+
+div.step.category {
+  display: inline-block;
+  padding: 0 1rem;
+  /* width: 30vw; */
+  flex: 1;
+}
+
+figure.game-boxes {
+  display: block;
+  padding: 2rem 0;
+}
+
+.images {
+  float: left;
+}
+
+.mention {
+  margin: 0 -20vw 0 -15vw;
+  background-color: #161116;
+  color: red;
+}
+
+.author-ill {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  margin-bottom: 0;
+}
+
+.authors {
+  padding: 1rem;
+}
+
+.conclusion {
+  background-color: #0c121c;
+  color: antiquewhite;
+  padding: 0 20vw 0 15vw;
+  /* padding: 2rem 10rem 10rem 2rem; */
+}
