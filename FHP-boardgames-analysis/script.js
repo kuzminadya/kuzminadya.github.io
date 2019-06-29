@@ -241,33 +241,7 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
       });
   };
 
-  var boxesRenderAll = function() {
-    svgBoxAll
-      .selectAll(".game-in-rect")
-      .data(data)
-      .enter()
-      .append("image")
-      .attr("xlink:href", function(d) {
-        return d.image_path;
-      })
-      .attr("class", "game-in-rect")
-      .style("fill-opacity", 1)
-      .attr("x", function(d) {
-        return d.xcoordinate;
-      })
-      .attr("y", function(d) {
-        return d.ycoordinate;
-      })
-      .attr("width", boxesSize)
-      .attr("height", boxesSize)
-      // .on("click", function(d) {})
-      .on("mouseover", handleMouseOver)
-      .on("mouseout", handleMouseOut);
-  };
-
-  var boxesRenderAuth = function() {
-    // svgBoxAll.selectAll(".game-in-rect").style("fill-opacity", 0);
-
+  var boxesRender = function() {
     svgBoxAuth
       .selectAll(".game-in-rect")
       .data(data)
@@ -285,23 +259,12 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
       })
       .attr("width", boxesSize)
       .attr("height", boxesSize)
-      .attr("fill", function(d) {
-        if (d.Nicht_normschön === "nein") {
-          return "#a57c1b";
-        } else if (d.Nicht_normschön === "x") {
-          return "grey";
-        } else {
-          return "#0E28EE";
-        }
-      })
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
       .on("mouseout", handleMouseOut);
   };
 
   var boxesRenderIll = function() {
-    // svgBoxAll.selectAll(".game-in-rect").style("fill-opacity", 0);
-
     svgBoxIll
       .selectAll(".game-in-rect")
       .data(data)
@@ -319,15 +282,6 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
       })
       .attr("width", boxesSize)
       .attr("height", boxesSize)
-      .attr("fill", function(d) {
-        if (d.Nicht_normschön === "nein") {
-          return "#a57c1b";
-        } else if (d.Nicht_normschön === "x") {
-          return "grey";
-        } else {
-          return "#0E28EE";
-        }
-      })
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
       .on("mouseout", handleMouseOut);
@@ -344,7 +298,7 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
   }
 
   svgCharMake();
-  // boxesRenderAll();
+  boxesRender();
   // boxesAllRender();
 
   //scroller////////////////////////////////////////////////////
