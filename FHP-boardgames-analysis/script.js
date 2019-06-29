@@ -377,7 +377,7 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
         characters: ".category",
         boxes: ".authors",
         step: "#scrolly .step",
-        offset: 0.8,
+        offset: 0.6,
         debug: true
       })
       .onStepEnter(handleStepEnter)
