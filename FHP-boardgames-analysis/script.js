@@ -15,50 +15,28 @@ var boxes = scrolly.selectAll(".svgBoxesAll");
 ///SVG
 var boxesSize = Math.round((window.innerWidth - 200) / 12);
 
-scrolly
-  .append("filter")
-  .attr("id", "desaturate")
-  .append("feColorMatrix")
-  .attr("type", "matrix")
-  .attr(
-    "values",
-    "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0  0      0      0      1 0"
-  );
-
 var tooltip = d3.select("#tooltipAuth");
 
 var svgChar = d3
   .selectAll(".SvgCharClass")
-  .append("svg")
-  .attr("height", "1000px")
-  .attr("width", "1000px")
   .attr("x", "180px")
   .append("g")
   .attr("transform", "translate(0,0)");
 
 var svgCharNoneM = d3
   .select("#gallerySvgCharM")
-  .append("svg")
-  .attr("height", "1000px")
-  .attr("width", "1000px")
   .attr("x", "180px")
   .append("g")
   .attr("transform", "translate(0,0)");
 
 var svgCharNoneW = d3
   .select("#gallerySvgCharW")
-  .append("svg")
-  .attr("height", "1000px")
-  .attr("width", "1000px")
   .attr("x", "180px")
   .append("g")
   .attr("transform", "translate(0,0)");
 
 var svgCharNoneB = d3
   .select("#gallerySvgCharB")
-  .append("svg")
-  .attr("height", "1000px")
-  .attr("width", "1000px")
   .attr("x", "180px")
   .append("g")
   .attr("transform", "translate(0,0)");
@@ -149,11 +127,11 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("height", "75px")
       .style("fill-opacity", 1)
       .attr("border-radius", "30")
-      .attr("fill", function(d) {
+      .attr("class", function(d) {
         if (d.Nicht_männliche_C === "nein") {
-          return "#a57c1b";
+          return "Nicht_männliche_C";
         } else {
-          return "#0E28EE";
+          return "none_Nicht_männliche_C";
         }
       });
   };
@@ -177,13 +155,13 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("height", "75px")
       .style("fill-opacity", 1)
       .attr("border-radius", "30")
-      .attr("fill", function(d) {
+      .attr("class", function(d) {
         if (d.Nichtweiße_C === "nein") {
-          return "#a57c1b";
+          return "Nichtweiße_C_Y";
         } else if (d.Nichtweiße_C === "x") {
-          return "grey";
+          return "Nichtweiße_C_G";
         } else {
-          return "#0E28EE";
+          return "Nichtweiße_C_B";
         }
       });
   };
@@ -207,14 +185,13 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("height", "75px")
       .style("fill-opacity", 1)
       .attr("border-radius", "30")
-      .sort()
-      .attr("fill", function(d) {
+      .attr("class", function(d) {
         if (d.Nicht_normschön === "nein") {
-          return "#a57c1b";
+          return "Nicht_normschön_Y";
         } else if (d.Nicht_normschön === "x") {
-          return "grey";
+          return "Nicht_normschön_G";
         } else {
-          return "#0E28EE";
+          return "Nicht_normschön_B";
         }
       });
   };
@@ -269,18 +246,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .on("mouseout", handleMouseOut);
   }
 
-  //Container for the gradients
-  // var defs = svgBoxAuth.append("defs");
-
-  // var filter = defs.append("filter").attr("id", "grayscale");
-
   var boxesRenderAuth = function() {
-    // svgBoxAll
-    //   .selectAll(".game-in-rect")
-    //   .data(data)
-    //   .enter()
-    //   .style("fill-opacity", 0);
-
     svgBoxAuth
       .selectAll(".game-in-rect")
       .data(data)
@@ -298,9 +264,9 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       })
       .attr("width", boxesSize)
       .attr("height", boxesSize)
-      .style("filter", function(d) {
+      .attr("class", function(d) {
         if (d.AutorW === 0) {
-          return "url(#grayscale)";
+          return "greyscale";
         }
       })
       .on("mouseover", handleMouseOver)
@@ -328,9 +294,9 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       })
       .attr("width", boxesSize)
       .attr("height", boxesSize)
-      .style("filter", function(d) {
+      .attr("class", function(d) {
         if (d.IllustrW === 0) {
-          return "url(#grayscale)";
+          return "greyscale";
         }
       })
       // .on("click", function(d) {})
@@ -437,37 +403,16 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
 
   var mentionOne = function() {
     mentionOneContainer
-      // .append("div")
-      // .attr("height", "200px")
-      // .attr("width", "200px")
       .append("svg:image")
       .attr("xlink:href", "images/HonorableMention/Jorvik.jpg")
       .attr("x", "130")
       .attr("y", "0")
       .attr("height", "20%")
       .attr("width", "20%");
-    //   .style("text-anchor", "middle")
-    //   .style("font-family", "sans-serif")
-    //   .style("font-size", 12)
-    //   .text(
-    //     "Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen."
-    //   );
-
-    // mentionOneContainer
-    //   .append("svg:text")
-    //   .attr("dy", "50px")
-    //   .text(
-    //     "Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen."
-    //   )
-    //   .style("font-family", "sans-serif")
-    //   .style("font-size", 12);
   };
 
   var mentionTwo = function() {
     mentionTwoContainer
-      // .append("div")
-      // .attr("height", "200px")
-      // .attr("width", "200px")
       .append("svg:image")
       .attr("xlink:href", "images/HonorableMention/Winziges_Verlies.jpg")
       .attr("x", "42")
@@ -478,9 +423,6 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
 
   var mentionThree = function() {
     mentionThreeContainer
-      // .append("div")
-      // .attr("height", "200px")
-      // .attr("width", "200px")
       .append("svg:image")
       .attr("xlink:href", "images/HonorableMention/Wingspan.jpg")
       .attr("x", "130")
@@ -500,7 +442,6 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
   activateFunctions[5] = boxesRenderAuth;
   activateFunctions[6] = boxesRenderIll;
   activateFunctions[7] = mentionThree;
-  // activateFunctions[5] = boxesRenderIll;
 
   function handleResize() {
     // 1. update height of step elements
