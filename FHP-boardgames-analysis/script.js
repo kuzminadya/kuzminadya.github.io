@@ -350,21 +350,113 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
   boxesRenderMake();
   // boxesAllRender();
 
-  //scroller////////////////////////////////////////////////////
-  // var main = d3.select('main')
-  // var scrolly = main.select('#scrolly');
-  // var figure = scrolly.select('figure');
-  // var article = scrolly.select('article');
-  // var step = article.selectAll('.step');
+  // var imgContainer = svg.append("g").attr("transform", "translate(228,53)");
+
+  var widthImage = "200px";
+  var heightImage = "200px";
+
+  // var img = imgContainer
+  //   .append("svg:image")
+  //   .attr("xlink:href", "marker.svg")
+  //   .attr("width", widthMarker)
+  //   .attr("height", widthMarker);
+
+  // var text = imgContainer
+  //   .append("svg:text")
+  //   .attr("dy", widthMarker / 2)
+  //   .text("hello world");
+
+  // text.attr("dx", (widthMarker - text.node().getComputedTextLength()) / 2);
+
+  var mentionOneContainer = d3
+    .select("#mention1")
+    .append("svg")
+    .attr("height", widthImage)
+    .attr("width", heightImage)
+    .attr("x", "0px")
+    .append("g");
+
+  var mentionTwoContainer = d3
+    .select("#mention2")
+    .append("svg")
+    .attr("height", "200px")
+    .attr("width", "200px")
+    .attr("x", "0px")
+    .append("g");
+
+  var mentionThreeContainer = d3
+    .select("#mention3")
+    .append("svg")
+    .attr("height", "200px")
+    .attr("width", "200px")
+    .attr("x", "0px")
+    .append("g");
+
+  var mentionOne = function() {
+    mentionOneContainer
+      // .append("div")
+      // .attr("height", "200px")
+      // .attr("width", "200px")
+      .append("svg:image")
+      .attr("xlink:href", "images/HonorableMention/Jorvik.jpg")
+      .attr("x", "130")
+      .attr("y", "0")
+      .attr("height", "20%")
+      .attr("width", "20%");
+    //   .style("text-anchor", "middle")
+    //   .style("font-family", "sans-serif")
+    //   .style("font-size", 12)
+    //   .text(
+    //     "Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen."
+    //   );
+
+    // mentionOneContainer
+    //   .append("svg:text")
+    //   .attr("dy", "50px")
+    //   .text(
+    //     "Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen."
+    //   )
+    //   .style("font-family", "sans-serif")
+    //   .style("font-size", 12);
+  };
+
+  var mentionTwo = function() {
+    mentionTwoContainer
+      // .append("div")
+      // .attr("height", "200px")
+      // .attr("width", "200px")
+      .append("svg:image")
+      .attr("xlink:href", "images/HonorableMention/Winziges_Verlies.jpg")
+      .attr("x", "42")
+      .attr("y", "0")
+      .attr("height", "20%")
+      .attr("width", "20%");
+  };
+
+  var mentionThree = function() {
+    mentionThreeContainer
+      // .append("div")
+      // .attr("height", "200px")
+      // .attr("width", "200px")
+      .append("svg:image")
+      .attr("xlink:href", "images/HonorableMention/Wingspan.jpg")
+      .attr("x", "130")
+      .attr("y", "0")
+      .attr("height", "20%")
+      .attr("width", "20%");
+  };
 
   const scroller = scrollama();
 
   var activateFunctions = [];
-  activateFunctions[0] = svgCharNoneMen;
-  activateFunctions[1] = svgCharNoneWhite;
-  activateFunctions[2] = svgCharNoneBeautiful;
-  activateFunctions[3] = boxesRenderAuth;
-  activateFunctions[4] = boxesRenderIll;
+  activateFunctions[0] = mentionOne;
+  activateFunctions[1] = svgCharNoneMen;
+  activateFunctions[2] = svgCharNoneWhite;
+  activateFunctions[3] = svgCharNoneBeautiful;
+  activateFunctions[4] = mentionTwo;
+  activateFunctions[5] = boxesRenderAuth;
+  activateFunctions[6] = boxesRenderIll;
+  activateFunctions[7] = mentionThree;
   // activateFunctions[5] = boxesRenderIll;
 
   function handleResize() {

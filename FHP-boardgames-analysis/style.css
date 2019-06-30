@@ -140,7 +140,7 @@ figure {
 }
 
 /* .is-active {
-  filter: grayscale(100%);
+  opacity: 0;
 } */
 
 #scrolly {
@@ -157,11 +157,37 @@ figure {
   font-family: "Fjalla_One", sans-serif;
   color: #060857;
   font-size: 140px;
-  text-align: center;
+  text-align: left;
+  padding-left: 10rem;
+  padding-top: 2rem;
   margin: 0;
   font-style: bold;
   line-height: 1.2;
 }
+
+.mentionStyle {
+  font-family: "Fjalla_One", sans-serif;
+  color: #a57c1b;
+  font-size: 24px;
+  width: 700px;
+  margin-left: -8rem;
+}
+
+.mentionStyleTwo {
+  font-family: "Fjalla_One", sans-serif;
+  color: #a57c1b;
+  font-size: 24px;
+  width: 700px;
+  float: right;
+  margin-right: 24rem;
+  padding: 0px;
+}
+
+/* .mentionPos {
+  position: absolute;
+  top: 0;
+  right: 20px;
+} */
 
 .instruction {
   padding: 0 20vw 0 15vw;
@@ -269,5 +295,6 @@ figure.game-boxes {
   background-color: #0c121c;
   color: antiquewhite;
   padding: 0 20vw 0 15vw;
+  padding-bottom: 25rem;
   /* padding: 2rem 10rem 10rem 2rem; */
 }
