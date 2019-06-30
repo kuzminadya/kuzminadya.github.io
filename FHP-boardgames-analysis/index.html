@@ -177,22 +177,22 @@
                 ></svg>
               </div>
             </article>   
-
+            <div class="mention step" data-step="4">
+                <article class="mentionStyleTwo">
+                    <p class="no-margins ">Winziges Verlies - Bei den Charakteren geht “Winziges Verlies” einen besonderen Weg, alle spielbaren Charaktere, beziehungsweise Heldinnen, sind nämlich weiblich, einfach so, ohne es besonders zu bewerben.</p>
+                </article>
+                <svg
+                id="mention2"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 200 200"
+              ></svg>  
+            </div>
           </div>
-          <div class="mention step" data-step="4">
-              <article class="mentionStyleTwo">
-                  <p class="no-margins ">Winziges Verlies - Bei den Charakteren geht “Winziges Verlies” einen besonderen Weg, alle spielbaren Charaktere, beziehungsweise Heldinnen, sind nämlich weiblich, einfach so, ohne es besonders zu bewerben.</p>
-              </article>
-              <svg
-              id="mention2"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              viewBox="0 0 200 200"
-            ></svg>  
-          </div>
+          
         </article>
         <article id="articleAuth">
           <div class="authors">
@@ -207,7 +207,9 @@
             <h2 class="no-padding">Autor*innen</h2>
             <div class="step" data-step="5">
               <figure class="game-boxes">
-                <div id="tooltipAuth"></div>
+                <div id="tooltipAuth">
+                  <div id="tipSVG"></div>
+                </div>
                 <svg
                   id="gallerySvgAuthor"
                   class="svgBoxesAll"
@@ -217,7 +219,10 @@
                   x="0px"
                   y="0px"
                   viewBox="0 0 1100 1000"
-                ></svg>
+                ><filter id="grayscale">
+                    <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
+                   </filter>
+              </svg>
               </figure>
             </div>
             <h2 class="no-padding">Illustrator*innen</h2>
@@ -233,7 +238,11 @@
                   x="0px"
                   y="0px"
                   viewBox="0 0 1100 1000"
-                ></svg>
+                >
+                <filter id="grayscale">
+                    <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
+                   </filter>
+              </svg>
               </figure>
             </div>
           </div>
@@ -276,5 +285,6 @@
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
   <script src="lib/stickyfill.min.js"></script>
   <script src="lib/scrollama.min.js"></script>
+  <script src="lib/d3-tip.js"></script>
   <script src="script.js"></script>
 </html>

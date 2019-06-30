@@ -41,11 +41,18 @@ body {
 #tooltipAuth {
   position: absolute;
   visibility: hidden;
-  padding: 3rem;
-  background: #ededed;
+  padding-right: 5rem;
+  background: white;
+  max-width: 300px;
+  white-space: normal;
   border-radius: 4px;
   pointer-events: none;
   right: 10px;
+  font-family: "Fjalla_One", sans-serif;
+  color: #060857;
+  font-size: 24px;
+  text-align: left;
+
   /* font-family: sans-serif; */
 }
 
@@ -274,10 +281,15 @@ figure.game-boxes {
   float: left;
 }
 
-.mention {
+/* .mention {
   margin: 0 -20vw 0 -15vw;
   background-color: #161116;
   color: red;
+} */
+
+.greyscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .author-ill {

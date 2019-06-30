@@ -65,25 +65,16 @@ var svgCharNoneB = d3
 
 var svgBoxAll = d3
   .selectAll(".svgBoxesAll")
-  .append("svg")
-  .attr("height", "100%")
-  .attr("width", "100%")
   .append("g")
   .attr("transform", "translate(0,0)");
 
 var svgBoxAuth = d3
   .select("#gallerySvgAuthor")
-  .append("svg")
-  .attr("height", "100%")
-  .attr("width", "100%")
   .append("g")
   .attr("transform", "translate(0,0)");
 
 var svgBoxIll = d3
   .select("#gallerySvgIllustrators")
-  .append("svg")
-  .attr("height", "100%")
-  .attr("width", "100%")
   .append("g")
   .attr("transform", "translate(0,0)");
 
@@ -112,7 +103,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
     d.ycoordinate = +d.ycoordinate;
     d.xcoordinate2 = +d.xcoordinate2;
     d.ycoordinate2 = +d.ycoordinate2;
-    console.log(d.AutorW);
+    console.log(d);
   });
 
   var svgCharMake = function() {
@@ -228,6 +219,31 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       });
   };
 
+  function handleMouseOver(d) {
+    tooltip.html(
+      d.Name +
+        "<br>" +
+        d.Erscheinungsjahr +
+        "<br><br>" +
+        "Frauen: " +
+        d.AutorW +
+        "<br>" +
+        "Männer: " +
+        d.AutorM
+    );
+    tooltip.style("visibility", "visible");
+  }
+
+  function handleMouseMove() {
+    return tooltip
+      .style("top", d3.event.pageY - 10 + "px")
+      .style("left", d3.event.pageX + 10 + "px");
+  }
+
+  function handleMouseOut(d) {
+    tooltip.style("visibility", "hidden");
+  }
+
   function boxesRenderMake() {
     svgBoxAll
       .selectAll(".game-in-rect")
@@ -249,6 +265,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("height", boxesSize)
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
+      // .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   }
 
@@ -272,45 +289,26 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("xlink:href", function(d) {
         return d.image_path;
       })
-      .style("fill-opacity", 0)
       .attr("class", "game-in-rect")
       .attr("x", function(d) {
-        return d.xcoordinate + 100 + "px";
+        return d.xcoordinate + "px";
       })
       .attr("y", function(d) {
         return d.ycoordinate;
       })
       .attr("width", boxesSize)
       .attr("height", boxesSize)
-      .attr("class", function(d) {
-        if (d.AutorW === "0") {
-          return "greyscale";
-        }
-      })
       .style("filter", function(d) {
-        if (d.AutorW === "0") {
-          return "filter", "url(#desaturate)";
-        } else {
-          return "";
+        if (d.AutorW === 0) {
+          return "url(#grayscale)";
         }
       })
-      .style("fill-opacity", function(d) {
-        if (d.AutorW === "0") {
-          return "0.1";
-        }
-      })
-      // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
+      // .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   };
 
   var boxesRenderIll = function() {
-    // svgBoxAll
-    //   .selectAll(".game-in-rect")
-    //   .data(data)
-    //   .enter()
-    //   .style("fill-opacity", 0);
-
     svgBoxIll
       .selectAll(".game-in-rect")
       .data(data)
@@ -323,27 +321,72 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .style("fill-opacity", 1)
       .attr("class", "game-in-rect")
       .attr("x", function(d) {
-        return d.xcoordinate + 100 + "px";
+        return d.xcoordinate + "px";
       })
       .attr("y", function(d) {
         return d.ycoordinate;
       })
       .attr("width", boxesSize)
       .attr("height", boxesSize)
+      .style("filter", function(d) {
+        if (d.IllustrW === 0) {
+          return "url(#grayscale)";
+        }
+      })
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
+      // .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   };
 
-  function handleMouseOver(d) {
-    tooltip.html(
-      "Name: " + d.Name + "<br>" + "Erscheinungsjahr: " + d.Erscheinungsjahr
-    );
-    tooltip.style("visibility", "visible");
-  }
-  function handleMouseOut(d) {
-    tooltip.style("visibility", "hidden");
-  }
+  // var tool_tip = d3
+  //   .tip()
+  //   .attr("class", "d3-tip")
+  //   .offset([20, 120])
+  //   .html(
+  //     d.Name +
+  //       "<br>" +
+  //       d.Erscheinungsjahr +
+  //       "<br><br>" +
+  //       "Autor*innen :" +
+  //       "<br>" +
+  //       "<div id='tipDiv'></div><br>"
+  //   );
+
+  // scrolly.call(tool_tip);
+
+  // function handleMouseOver(d) {
+  //   tool_tip.show();
+  //   var tipSVG = d3
+  //     .select("#tipDiv")
+  //     .append("svg")
+  //     .attr("width", 200)
+  //     .attr("height", 50);
+
+  //   tipSVG
+  //     .append("rect")
+  //     .attr("fill", "steelblue")
+  //     .attr("y", 10)
+  //     .attr("width", 0)
+  //     .attr("height", 30)
+  //     .transition()
+  //     .duration(1000)
+  //     .attr("width", d.AutorM);
+
+  // tipSVG.append("text")
+  //   .text(d)
+  //   .attr("x", 10)
+  //   .attr("y", 30)
+  //   .transition()
+  //   .duration(1000)
+  //   .attr("x", 6 + d * 6)
+  // }
+
+  // function handleMouseOut(d) {
+  //   tool_tip.hide;
+  // }
+
+  // + "<img src="d.image_path">"
 
   svgCharMake();
   // boxesRender();
@@ -531,51 +574,6 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
   init();
 });
 
-//   function handleStepEnter(response) {
-//     console.log(response.index, "-------- enter");
-//     step.classed("is-active", function(d, i) {
-//       return i === response.index;
-//     });
-
-//     scrolly.select("div").text(response.index + 1);
-//     scrolly.call(activateFunctions[response.index]);
-//   }
-
-//   function handleStepProgress(response) {
-//     var el = d3.select(response.element);
-
-//     // var val = el.attr("data-step");
-//     // var rgba = "rgba(" + val + ", " + response.progress + ")";
-//     // el.style("background-color", rgba);
-//     // el.select(".progress").text(d3.format(".1%")(response.progress));
-
-//     console.log(response);
-//   }
-
-//   function handleStepExit(response) {
-//     console.log(response.index, "-------- exit");
-//     response.element.classList.remove("is-active");
-//   }
-
-//   function init() {
-//     scroller
-//       .setup({
-//         scrolly: "#scrolly",
-//         article: "#article",
-//         characters: ".category",
-//         boxes: ".authors",
-//         step: "#scrolly article .step",
-//         offset: 0.2,
-//         debug: true
-//       })
-//       .onStepEnter(handleStepEnter)
-//       .onStepExit(handleStepExit)
-//       .onStepProgress(handleStepProgress);
-
-//     window.addEventListener("resize", scroller.resize);
-//   }
-//   init();
-// });
 // /////// https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
 var options = {
