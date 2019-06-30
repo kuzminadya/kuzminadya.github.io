@@ -1,45 +1,29 @@
 var scrolly = d3.select("#scrolly");
+var step = scrolly.selectAll(".step");
 /// var Characters
 var article = scrolly.selectAll("article");
 var figure = article.selectAll(".characters");
 
 /// var Autors
-var articleAuth = scrolly.select("#articleAuth");
-var boxes = articleAuth.select(".authors");
-var gameboxes = boxes.select(".game-boxes");
-var step = scrolly.selectAll(".step");
+// var articleAuth = scrolly.select("#articleAuth");
+// var boxes = articleAuth.select(".authors");
+// var gameboxes = boxes.selectAll(".game-boxes");
+
+/// var Auth and Ill
+var boxes = scrolly.selectAll(".svgBoxesAll");
 
 ///SVG
 var boxesSize = Math.round((window.innerWidth - 200) / 12);
 
-// var defs = svgBox.append("defs");
-
-////?????????////////
-
-// var currentValue = 0,
-//   duration = 3000,
-//   newValue = 5;
-
-// var svgPercentage = d3
-//   .select("#svgPercentage")
-//   .append("svg")
-//   .attr("width", 200)
-//   .attr("height", 100);
-
-// var numberIncrease = function() {
-//   svgPercentage
-//     // .append("text", "%")
-//     .attr("x", "0")
-//     .attr("y", "0")
-//     .transition()
-//     .duration(3500);
-//   // .tween("text", function() {
-//   //   var i = d3.interpolate(currentValue, newValue);
-//   //   return function(t) {
-//   //     this.textContent = Math.round(i(t));
-//   //   };
-//   // });
-// };
+scrolly
+  .append("filter")
+  .attr("id", "desaturate")
+  .append("feColorMatrix")
+  .attr("type", "matrix")
+  .attr(
+    "values",
+    "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0  0      0      0      1 0"
+  );
 
 var tooltip = d3.select("#tooltipAuth");
 
@@ -80,7 +64,7 @@ var svgCharNoneB = d3
   .attr("transform", "translate(0,0)");
 
 var svgBoxAll = d3
-  .selectAll(".galleryAllSvg")
+  .selectAll(".svgBoxesAll")
   .append("svg")
   .attr("height", "100%")
   .attr("width", "100%")
@@ -103,7 +87,7 @@ var svgBoxIll = d3
   .append("g")
   .attr("transform", "translate(0,0)");
 
-d3.csv("boadrgame-data-test.csv", function(err, data) {
+d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
   if (err) {
     console.log(err);
   }
@@ -119,12 +103,16 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
     d.Nichtweiße_C = d.Nichtweiße_C;
     d.Nicht_normschön = d.Nicht_normschön;
     d.Anleitung_gegendert = d.Anleitung_gegendert;
+    d.AutorM = +d.AutorM;
+    d.AutorW = +d.AutorW;
+    d.IllustrM = +d.IllustrM;
+    d.IllustrW = +d.IllustrW;
 
     d.xcoordinate = +d.xcoordinate;
     d.ycoordinate = +d.ycoordinate;
     d.xcoordinate2 = +d.xcoordinate2;
     d.ycoordinate2 = +d.ycoordinate2;
-    // console.log(d);
+    console.log(d.AutorW);
   });
 
   var svgCharMake = function() {
@@ -213,7 +201,6 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
     svgCharNoneB
       .selectAll(".char-in-rect")
       .data(data)
-
       .enter()
       .append("rect")
       .attr("rx", 6)
@@ -241,8 +228,8 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
       });
   };
 
-  var boxesRender = function() {
-    svgBoxAuth
+  function boxesRenderMake() {
+    svgBoxAll
       .selectAll(".game-in-rect")
       .data(data)
       .enter()
@@ -251,6 +238,7 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
         return d.image_path;
       })
       .attr("class", "game-in-rect")
+
       .attr("x", function(d) {
         return d.xcoordinate;
       })
@@ -262,10 +250,21 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
       .on("mouseout", handleMouseOut);
-  };
+  }
 
-  var boxesRenderIll = function() {
-    svgBoxIll
+  //Container for the gradients
+  // var defs = svgBoxAuth.append("defs");
+
+  // var filter = defs.append("filter").attr("id", "grayscale");
+
+  var boxesRenderAuth = function() {
+    // svgBoxAll
+    //   .selectAll(".game-in-rect")
+    //   .data(data)
+    //   .enter()
+    //   .style("fill-opacity", 0);
+
+    svgBoxAuth
       .selectAll(".game-in-rect")
       .data(data)
       .enter()
@@ -273,9 +272,58 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
       .attr("xlink:href", function(d) {
         return d.image_path;
       })
+      .style("fill-opacity", 0)
       .attr("class", "game-in-rect")
       .attr("x", function(d) {
-        return d.xcoordinate;
+        return d.xcoordinate + 100 + "px";
+      })
+      .attr("y", function(d) {
+        return d.ycoordinate;
+      })
+      .attr("width", boxesSize)
+      .attr("height", boxesSize)
+      .attr("class", function(d) {
+        if (d.AutorW === "0") {
+          return "greyscale";
+        }
+      })
+      .style("filter", function(d) {
+        if (d.AutorW === "0") {
+          return "filter", "url(#desaturate)";
+        } else {
+          return "";
+        }
+      })
+      .style("fill-opacity", function(d) {
+        if (d.AutorW === "0") {
+          return "0.1";
+        }
+      })
+      // .on("click", function(d) {})
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut);
+  };
+
+  var boxesRenderIll = function() {
+    // svgBoxAll
+    //   .selectAll(".game-in-rect")
+    //   .data(data)
+    //   .enter()
+    //   .style("fill-opacity", 0);
+
+    svgBoxIll
+      .selectAll(".game-in-rect")
+      .data(data)
+      .enter()
+      .append("image")
+
+      .attr("xlink:href", function(d) {
+        return d.image_path;
+      })
+      .style("fill-opacity", 1)
+      .attr("class", "game-in-rect")
+      .attr("x", function(d) {
+        return d.xcoordinate + 100 + "px";
       })
       .attr("y", function(d) {
         return d.ycoordinate;
@@ -298,7 +346,8 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
   }
 
   svgCharMake();
-  boxesRender();
+  // boxesRender();
+  boxesRenderMake();
   // boxesAllRender();
 
   //scroller////////////////////////////////////////////////////
@@ -314,9 +363,9 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
   activateFunctions[0] = svgCharNoneMen;
   activateFunctions[1] = svgCharNoneWhite;
   activateFunctions[2] = svgCharNoneBeautiful;
-  activateFunctions[3] = boxesRender;
+  activateFunctions[3] = boxesRenderAuth;
   activateFunctions[4] = boxesRenderIll;
-  activateFunctions[5] = boxesRenderIll;
+  // activateFunctions[5] = boxesRenderIll;
 
   function handleResize() {
     // 1. update height of step elements
@@ -375,9 +424,9 @@ d3.csv("boadrgame-data-test.csv", function(err, data) {
         scrolly: "#scrolly",
         article: "article",
         characters: ".category",
-        boxes: ".authors",
+        boxes: ".game-boxes",
         step: "#scrolly .step",
-        offset: 0.4,
+        offset: 0.6,
         debug: true
       })
       .onStepEnter(handleStepEnter)

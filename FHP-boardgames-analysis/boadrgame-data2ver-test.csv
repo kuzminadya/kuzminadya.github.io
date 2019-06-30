@@ -49,43 +49,43 @@ Number,NameID,Name,image_path,Erscheinungsjahr,menschliche_Darstellungen,Nicht_m
 48,Anachrony,Anachrony,images/Anachrony.jpg,2017,ja,ja,ja,x,nein,m,1,0,m,1,0,700,400,1480,820
 49,Race_for_the_Galaxy,Race for the Galaxy,images/RacefortheGalaxy.jpg,2007,ja,ja,ja,nein,nein,mmm,3,0,m,1,0,800,400,1680,820
 50,Caylus,Caylus,images/Caylus.jpg,2005,ja,ja,nein,nein,nein,m,1,0,m,1,0,900,400,1880,820
-51,Azul,Azul,images/Azul2.jpg,2017,ja,ja,ja,ja,nein,m,1,0,m,1,0,100,500,0,1020
-52,Kingdomino,Kingdomino,images/Kinddomino.jpg,2015,ja,ja,ja,nein,nein,m,1,0,m,1,0,200,500,220,1020
-53,Codenames,Codenames,images/Codenames.jpg,2015,nein,x,x,x,nein,m,1,0,m,1,0,300,500,440,1020
-54,Colt Express,Colt_Express,images/ColtExpress.jpg,2014,ja,ja,ja,nein,nein,m,1,0,mmm,3,0,400,500,660,1020
-55,Camel Up,Camel_Up,images/CamelUp.jpg,2014,ja,ja,x,x,nein,m,1,0,m,1,0,500,500,880,1020
-56,Hanabi,Hanabi,images/Hanabi.jpg,2012,ja,nein,nein,nein,nein,m,1,0,w,0,1,600,500,1080,1020
-57,Kingdom Builder,Kingdom_Builder,images/KingdomBuilder.jpg,2011,ja,ja,ja,nein,nein,m,1,0,m,1,0,700,500,1280,1020
-58,Qwirkle,Qwirkle,images/Qwirkle.jpg,2006,nein,x,x,x,nein,w,0,1,0,0,0,800,500,1480,1020
-59,Dixit,Dixit,images/Dixit.jpg,2008,ja,ja,ja,nein,nein,m,1,0,w,0,1,900,500,1680,1020
-60,Dominion,Dominion,images/Dominion.jpg,2008,ja,ja,x,x,nein,m,1,0,55 m u. w,,,0,600,1880,1020
-61,Keltis,Keltis,images/Keltis.jpg,2008,ja,nein,nein,nein,nein,m,1,0,mm,2,0,100,600,0,1220
-62,Zooloretto,Zooloretto,images/Unbenannt-139.jpg,2007,ja,ja,ja,x,nein,m,1,0,m,1,0,200,600,220,1220
-63,Thurn und Taxis,Thurn_und_Taxis,images/Unbenannt-134.jpg,2006,ja,ja,ja,nein,nein,mw,1,1,m,1,0,300,600,440,1220
-64,Niagara,Niagara,images/Niagara.jpg,2004,ja,ja,nein,nein,nein,m,1,0,m,1,0,400,600,660,1220
-65,Zug um Zug,Zug_um_Zug,images/Unbenannt-140.jpg,2004,ja,ja,ja,ja,nein,m,1,0,mm,2,0,500,600,880,1220
-66,Der Palast von Alhambra,Der_Palast_von_Alhambra,images/Alhambra.jpg,2003,nein,x,x,x,nein,m,1,0,mmm,3,0,600,600,1080,1220
-67,Villa Paletti,Villa_Paletti,images/Unbenannt-138.jpg,2001,ja,ja,ja,nein,nein,m,1,0,m,1,0,700,600,1280,1220
-68,Carcassonne,Carcassonne,images/Carcassonne.jpg,2000,ja,ja,x,x,nein,m,1,0,w,0,1,800,600,1480,1220
-69,Torres,Torres,images/Unbenannt-136.jpg,1999,ja,nein,nein,nein,nein,mm,2,0,w,0,1,900,600,1680,1220
-70,Tikal,Tikal,images/Unbenannt-135.jpg,1999,ja,ja,ja,nein,nein,mm,2,0,m,1,0,0,700,1880,1220
-71,Elfenland,Elfenland,images/Elfenland.jpg,1998,nein,x,x,x,nein,m,1,0,w,0,1,100,700,0,1420
-72,Mississippi Queen,Mississippi_Queen,images/MississippiQueen.jpg,1997,ja,ja,ja,nein,nein,m,1,0,m,1,0,200,700,220,1420
-73,El Grande,El_Grande,images/ElGrande.jpg,1995,ja,ja,x,x,nein,mm,2,0,w,0,1,300,700,440,1420
-74,Die Siedler von Catan,Die_Siedler_von_Catan,images/DieSiedlervonCatan.jpg,1995,ja,nein,nein,nein,nein,m,1,0,mww,1,2,400,700,660,1420
-75,Manhattan,Manhattan,images/Manhattan.jpg,1994,ja,ja,ja,x,nein,m,1,0,w,0,1,500,700,880,1420
-76,Bluff,Bluff,images/Bluff.jpg,1986,ja,ja,ja,nein,nein,m,1,0,m,1,0,600,700,1080,1420
-77,Um Reifenbreite,Um_Reifenbreite,images/Unbenannt-137.jpg,1979,ja,ja,nein,nein,nein,m,1,0,m,1,0,700,700,1280,1420
-78,Drunter & Drüber,Drunter_&_Drüber,images/Drunter&Drüber.jpg,1997,ja,ja,ja,nein,nein,m,1,0,m,1,0,800,700,1480,1420
-79,Adel verpflichtet,Adel_verpflichtet,images/AdelVerpflichtet.jpg,1990,ja,ja,x,x,nein,m,1,0,ww,0,2,900,700,1680,1420
-80,Café International,Café_International,images/CafeInternational.jpg,1989,ja,nein,nein,nein,nein,m,1,0,mm,2,0,0,800,1880,1420
-81,Barbarossa und die Rätselmeister,Barbarossa_und_die_Rätselmeister,images/Barbarossa.jpg,1988,ja,ja,ja,x,nein,m,1,0,m,1,0,100,800,0,1620
-82,Auf Achse,Auf_Achse,images/AufAchse.jpg,1982,ja,ja,ja,nein,nein,m,1,0,m,1,0,200,800,220,1620
-83,Heimlich & Co.,Heimlich_&_Co.,images/Heimlich&Co.jpg,1984,ja,ja,nein,nein,nein,m,1,0,mmm,3,0,300,800,440,1620
-84,Sherlock Holmes Criminal-Cabinet,Sherlock_Holmes_Criminal-Cabinet,images/Unbenannt-133.jpg,1981,ja,ja,ja,x,nein,mmwm,3,1,mm,2,0,400,800,660,1620
-85,Dampfross,Dampfross,images/Dampfross.jpg,1973,ja,ja,ja,nein,nein,m,1,0,m,1,0,500,800,880,1620
-86,Scotland Yard,Scotland_Yard,images/Unbenannt-132.jpg,1983,ja,ja,nein,nein,nein,0,0,0,m,1,0,600,800,1080,1620
-87,Sagaland,Sagaland,images/Unbenannt-131.jpg,1981,ja,ja,nein,nein,nein,mm,2,0,0,0,0,700,800,1280,1620
-88,Focus,Focus,images/Focus.jpg,1965,ja,ja,ja,x,nein,m,1,0,ww,0,2,800,800,1480,1620
-89,Rummikub,Rummikub,images/Rummikub.jpg,1950,ja,ja,ja,nein,nein,m,1,0,0,0,0,900,800,1680,1620
-90,Hase und Igel,Hase_und_Igel,images/HaseundIgel.jpg,1974,ja,ja,nein,nein,nein,m,1,0,mm,2,0,0,900,1880,1620
+51,Azul,Azul,images/Azul2.jpg,2017,ja,ja,ja,ja,nein,m,1,0,m,1,0,0,500,0,1020
+52,Kingdomino,Kingdomino,images/Kinddomino.jpg,2015,ja,ja,ja,nein,nein,m,1,0,m,1,0,100,500,220,1020
+53,Codenames,Codenames,images/Codenames.jpg,2015,nein,x,x,x,nein,m,1,0,m,1,0,200,500,440,1020
+54,Colt Express,Colt_Express,images/ColtExpress.jpg,2014,ja,ja,ja,nein,nein,m,1,0,mmm,3,0,300,500,660,1020
+55,Camel Up,Camel_Up,images/CamelUp.jpg,2014,ja,ja,x,x,nein,m,1,0,m,1,0,400,500,880,1020
+56,Hanabi,Hanabi,images/Hanabi.jpg,2012,ja,nein,nein,nein,nein,m,1,0,w,0,1,500,500,1080,1020
+57,Kingdom Builder,Kingdom_Builder,images/KingdomBuilder.jpg,2011,ja,ja,ja,nein,nein,m,1,0,m,1,0,600,500,1280,1020
+58,Qwirkle,Qwirkle,images/Qwirkle.jpg,2006,nein,x,x,x,nein,w,0,1,0,0,0,700,500,1480,1020
+59,Dixit,Dixit,images/Dixit.jpg,2008,ja,ja,ja,nein,nein,m,1,0,w,0,1,800,500,1680,1020
+60,Dominion,Dominion,images/Dominion.jpg,2008,ja,ja,x,x,nein,m,1,0,55 m u. w,,,900,500,1880,1020
+61,Keltis,Keltis,images/Keltis.jpg,2008,ja,nein,nein,nein,nein,m,1,0,mm,2,0,0,600,0,1220
+62,Zooloretto,Zooloretto,images/Unbenannt-139.jpg,2007,ja,ja,ja,x,nein,m,1,0,m,1,0,100,600,220,1220
+63,Thurn und Taxis,Thurn_und_Taxis,images/Unbenannt-134.jpg,2006,ja,ja,ja,nein,nein,mw,1,1,m,1,0,200,600,440,1220
+64,Niagara,Niagara,images/Niagara.jpg,2004,ja,ja,nein,nein,nein,m,1,0,m,1,0,300,600,660,1220
+65,Zug um Zug,Zug_um_Zug,images/Unbenannt-140.jpg,2004,ja,ja,ja,ja,nein,m,1,0,mm,2,0,400,600,880,1220
+66,Der Palast von Alhambra,Der_Palast_von_Alhambra,images/Alhambra.jpg,2003,nein,x,x,x,nein,m,1,0,mmm,3,0,500,600,1080,1220
+67,Villa Paletti,Villa_Paletti,images/Unbenannt-138.jpg,2001,ja,ja,ja,nein,nein,m,1,0,m,1,0,600,600,1280,1220
+68,Carcassonne,Carcassonne,images/Carcassonne.jpg,2000,ja,ja,x,x,nein,m,1,0,w,0,1,700,600,1480,1220
+69,Torres,Torres,images/Unbenannt-136.jpg,1999,ja,nein,nein,nein,nein,mm,2,0,w,0,1,800,600,1680,1220
+70,Tikal,Tikal,images/Unbenannt-135.jpg,1999,ja,ja,ja,nein,nein,mm,2,0,m,1,0,900,600,1880,1220
+71,Elfenland,Elfenland,images/Elfenland.jpg,1998,nein,x,x,x,nein,m,1,0,w,0,1,0,700,0,1420
+72,Mississippi Queen,Mississippi_Queen,images/MississippiQueen.jpg,1997,ja,ja,ja,nein,nein,m,1,0,m,1,0,100,700,220,1420
+73,El Grande,El_Grande,images/ElGrande.jpg,1995,ja,ja,x,x,nein,mm,2,0,w,0,1,200,700,440,1420
+74,Die Siedler von Catan,Die_Siedler_von_Catan,images/DieSiedlervonCatan.jpg,1995,ja,nein,nein,nein,nein,m,1,0,mww,1,2,300,700,660,1420
+75,Manhattan,Manhattan,images/Manhattan.jpg,1994,ja,ja,ja,x,nein,m,1,0,w,0,1,400,700,880,1420
+76,Bluff,Bluff,images/Bluff.jpg,1986,ja,ja,ja,nein,nein,m,1,0,m,1,0,500,700,1080,1420
+77,Um Reifenbreite,Um_Reifenbreite,images/Unbenannt-137.jpg,1979,ja,ja,nein,nein,nein,m,1,0,m,1,0,600,700,1280,1420
+78,Drunter & Drüber,Drunter_&_Drüber,images/Drunter&Drüber.jpg,1997,ja,ja,ja,nein,nein,m,1,0,m,1,0,700,700,1480,1420
+79,Adel verpflichtet,Adel_verpflichtet,images/AdelVerpflichtet.jpg,1990,ja,ja,x,x,nein,m,1,0,ww,0,2,800,700,1680,1420
+80,Café International,Café_International,images/CafeInternational.jpg,1989,ja,nein,nein,nein,nein,m,1,0,mm,2,0,900,700,1880,1420
+81,Barbarossa und die Rätselmeister,Barbarossa_und_die_Rätselmeister,images/Barbarossa.jpg,1988,ja,ja,ja,x,nein,m,1,0,m,1,0,0,800,0,1620
+82,Auf Achse,Auf_Achse,images/AufAchse.jpg,1982,ja,ja,ja,nein,nein,m,1,0,m,1,0,100,800,220,1620
+83,Heimlich & Co.,Heimlich_&_Co.,images/Heimlich&Co.jpg,1984,ja,ja,nein,nein,nein,m,1,0,mmm,3,0,200,800,440,1620
+84,Sherlock Holmes Criminal-Cabinet,Sherlock_Holmes_Criminal-Cabinet,images/Unbenannt-133.jpg,1981,ja,ja,ja,x,nein,mmwm,3,1,mm,2,0,300,800,660,1620
+85,Dampfross,Dampfross,images/Dampfross.jpg,1973,ja,ja,ja,nein,nein,m,1,0,m,1,0,400,800,880,1620
+86,Scotland Yard,Scotland_Yard,images/Unbenannt-132.jpg,1983,ja,ja,nein,nein,nein,0,0,0,m,1,0,500,800,1080,1620
+87,Sagaland,Sagaland,images/Unbenannt-131.jpg,1981,ja,ja,nein,nein,nein,mm,2,0,0,0,0,600,800,1280,1620
+88,Focus,Focus,images/Focus.jpg,1965,ja,ja,ja,x,nein,m,1,0,ww,0,2,700,800,1480,1620
+89,Rummikub,Rummikub,images/Rummikub.jpg,1950,ja,ja,ja,nein,nein,m,1,0,0,0,0,800,800,1680,1620
+90,Hase und Igel,Hase_und_Igel,images/HaseundIgel.jpg,1974,ja,ja,nein,nein,nein,m,1,0,mm,2,0,900,800,1880,1620
