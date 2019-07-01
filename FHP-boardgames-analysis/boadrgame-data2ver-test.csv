@@ -1,14 +1,14 @@
 Number,NameID,Name,image_path,Erscheinungsjahr,menschliche_Darstellungen,Nicht_männliche_C,Nichtweiße_C,Nicht_normschön,Anleitung_gegendert,Autor*innen?,AutorM,AutorW,Illustrator*innen,IllustrM,IllustrW,xcoordinate,ycoordinate,xcoordinate2,ycoordinate2
-1,Gloomhaven,Gloomhaven,images/Gloomhaven.jpg,2017,ja,ja,ja,x,nein,m,1,0,mmm,3,0,0,0,0,0
-2,Pandemic_Legacy:_Season_1,Pandemic Legacy: Season 1,images/PandemicLegacy Season1.jpg,2015,ja,ja,ja,nein,nein,m,1,0,mm,4,0,100,0,220,0
-3,Through_the_Ages:_A_New_Story_of_Civilization,Through the Ages: A New Story of Civilization,images/ThroughtheAgesANewStoryofCivilization.jpg,2015,ja,ja,nein,nein,nein,m,1,0,mmmm,4,0,200,0,440,0
-4,Terraforming_Mars,Terraforming Mars,images/TerraformingMars.jpg,2016,ja,ja,ja,ja,nein,m,1,0,m,1,0,300,0,660,0
-5,Twilight_Struggle,Twilight Struggle,images/TwilightStruggle.jpg,2005,ja,ja,ja,ja,nein,mm,2,0,mmmmm,5,0,400,0,880,0
-6,Star_Wars:_Rebellion,Star Wars: Rebellion,images/StarWarsRebellion.jpg,2016,ja,ja,ja,nein,nein,m,1,0,48 m u. w,24,24,500,0,1080,0
-7,Gaia_Project,Gaia Project,images/GaiaProject.jpg,2017,nein,x,x,x,nein,mm,2,0,m,1,0,600,0,1280,0
-8,Scythe,Scythe,images/Scythe.jpg,2016,ja,ja,ja,nein,nein,m,1,0,m,1,0,700,0,1480,0
-9,Twilight_Imperium_Fourth_Edition,Twilight Imperium (Fourth Edition),images/TwilightImperium.jpg,2017,ja,ja,x,x,nein,mmm,3,0,m,1,0,800,0,1680,0
-10,Great_Western_Trail,Great Western Trail,images/GreatWesternTrail.jpg,2016,ja,nein,nein,nein,nein,m,1,0,m,1,0,900,0,1880,0
+1,Gloomhaven,Gloomhaven,images/Gloomhaven.jpg,2017,ja,ja,ja,x,nein,m,1,0,mmm,3,0,0,10,0,10
+2,Pandemic_Legacy:_Season_1,Pandemic Legacy: Season 1,images/PandemicLegacy Season1.jpg,2015,ja,ja,ja,nein,nein,m,1,0,mm,4,0,100,10,220,10
+3,Through_the_Ages:_A_New_Story_of_Civilization,Through the Ages: A New Story of Civilization,images/ThroughtheAgesANewStoryofCivilization.jpg,2015,ja,ja,nein,nein,nein,m,1,0,mmmm,4,0,200,10,440,10
+4,Terraforming_Mars,Terraforming Mars,images/TerraformingMars.jpg,2016,ja,ja,ja,ja,nein,m,1,0,m,1,0,300,10,660,10
+5,Twilight_Struggle,Twilight Struggle,images/TwilightStruggle.jpg,2005,ja,ja,ja,ja,nein,mm,2,0,mmmmm,5,0,400,10,880,10
+6,Star_Wars:_Rebellion,Star Wars: Rebellion,images/StarWarsRebellion.jpg,2016,ja,ja,ja,nein,nein,m,1,0,48 m u. w,24,24,500,10,1080,10
+7,Gaia_Project,Gaia Project,images/GaiaProject.jpg,2017,nein,x,x,x,nein,mm,2,0,m,1,0,600,10,1280,10
+8,Scythe,Scythe,images/Scythe.jpg,2016,ja,ja,ja,nein,nein,m,1,0,m,1,0,700,10,1480,10
+9,Twilight_Imperium_Fourth_Edition,Twilight Imperium (Fourth Edition),images/TwilightImperium.jpg,2017,ja,ja,x,x,nein,mmm,3,0,m,1,0,800,10,1680,10
+10,Great_Western_Trail,Great Western Trail,images/GreatWesternTrail.jpg,2016,ja,nein,nein,nein,nein,m,1,0,m,1,0,900,10,1880,10
 11,Terra_Mystica,Terra Mystica,images/TerraMystica.jpg,2012,ja,ja,ja,x,nein,mm,2,0,m,1,0,0,100,0,220
 12,War_of_the_Ring_(Second_Edition),War of the Ring (Second Edition),images/WaroftheRing.jpg,2012,ja,ja,ja,nein,nein,mmm,3,0,mm,2,0,100,100,220,220
 13,The_Castles_of_Burgundy,The Castles of Burgundy,images/TheCastlesofBurgundy.jpg,2011,ja,ja,nein,nein,nein,m,1,0,mm,2,0,200,100,440,220
