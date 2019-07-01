@@ -13,7 +13,7 @@ var figure = article.selectAll(".characters");
 var boxes = scrolly.selectAll(".svgBoxesAll");
 
 ///SVG
-var boxesSize = Math.round((window.innerWidth - 200) / 12);
+var boxesSize = Math.round((window.innerWidth - 200) / 15);
 
 var tooltip = d3.select("#tooltipAuth");
 
@@ -479,8 +479,8 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
         characters: ".category",
         boxes: ".game-boxes",
         step: "#scrolly .step",
-        offset: 0.9,
-        debug: true
+        offset: 0.99,
+        debug: false
       })
       .onStepEnter(handleStepEnter)
       .onStepExit(handleStepExit)
