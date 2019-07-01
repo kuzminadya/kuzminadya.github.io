@@ -1,5 +1,5 @@
 var scrolly = d3.select("#scrolly");
-var step = scrolly.selectAll(".step");
+var step = d3.selectAll(".step");
 /// var Characters
 var article = scrolly.selectAll("article");
 var figure = article.selectAll(".characters");
@@ -20,41 +20,28 @@ var tooltip = d3.select("#tooltipAuth");
 var svgChar = d3
   .selectAll(".SvgCharClass")
   .attr("x", "180px")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+  .append("g");
 
 var svgCharNoneM = d3
   .select("#gallerySvgCharM")
   .attr("x", "180px")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+  .append("g");
 
 var svgCharNoneW = d3
   .select("#gallerySvgCharW")
   .attr("x", "180px")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+  .append("g");
 
 var svgCharNoneB = d3
   .select("#gallerySvgCharB")
   .attr("x", "180px")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+  .append("g");
 
-var svgBoxAll = d3
-  .selectAll(".svgBoxesAll")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+var svgBoxAll = d3.selectAll(".svgBoxesAll").append("g");
 
-var svgBoxAuth = d3
-  .select("#gallerySvgAuthor")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+var svgBoxAuth = d3.select("#gallerySvgAuthor").append("g");
 
-var svgBoxIll = d3
-  .select("#gallerySvgIllustrators")
-  .append("g")
-  .attr("transform", "translate(0,0)");
+var svgBoxIll = d3.select("#gallerySvgIllustrators").append("g");
 
 d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
   if (err) {
@@ -242,7 +229,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("height", boxesSize)
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
-      // .on("mousemove", handleMouseMove)
+      .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   }
 
@@ -270,7 +257,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
         }
       })
       .on("mouseover", handleMouseOver)
-      // .on("mousemove", handleMouseMove)
+      .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   };
 
@@ -301,7 +288,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       })
       // .on("click", function(d) {})
       .on("mouseover", handleMouseOver)
-      // .on("mousemove", handleMouseMove)
+      .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   };
 
@@ -431,30 +418,20 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
       .attr("width", "20%");
   };
 
+  function empty() {}
+
   const scroller = scrollama();
 
   var activateFunctions = [];
-  activateFunctions[0] = mentionOne;
+  activateFunctions[0] = empty;
   activateFunctions[1] = svgCharNoneMen;
   activateFunctions[2] = svgCharNoneWhite;
   activateFunctions[3] = svgCharNoneBeautiful;
-  activateFunctions[4] = mentionTwo;
-  activateFunctions[5] = boxesRenderAuth;
-  activateFunctions[6] = boxesRenderIll;
-  activateFunctions[7] = mentionThree;
+  activateFunctions[4] = boxesRenderAuth;
+  activateFunctions[5] = boxesRenderIll;
+  activateFunctions[6] = mentionThree;
 
-  function handleResize() {
-    // 1. update height of step elements
-    var stepH = Math.floor(window.innerHeight * 0.75);
-    step.style("height", stepH + "px");
-    var figureHeight = window.innerHeight / 2;
-    var figureMarginTop = (window.innerHeight - figureHeight) / 2;
-    figure
-      .style("height", figureHeight + "px")
-      .style("top", figureMarginTop + "px");
-    // 3. tell scrollama to update new element dimensions
-    scroller.resize();
-  }
+  function handleResize() {}
   // scrollama event handlers
 
   function handleStepEnter(response) {
@@ -502,7 +479,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
         characters: ".category",
         boxes: ".game-boxes",
         step: "#scrolly .step",
-        offset: 0.6,
+        offset: 0.9,
         debug: true
       })
       .onStepEnter(handleStepEnter)

@@ -12,12 +12,13 @@
   <body>
       
     <main>
-        <video autoplay muted loop id="myVideo">
-            <source src="Sequenz 01_1.mp4" type="video/mp4">
-          </video> 
-          
+          <!-- autoplay=1 -->
+        
+        <div class="video">
+            <iframe src="https://player.vimeo.com/video/345421316?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-99;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <h1>Wer darf mitspielen?</h1>
+        </div>
       <section id="intro">
-        <h1><span>DIVERSITÄT</span> IN BRETTSPIELEN</h1>
         <p>
           Spiele sind etwas Besonderes. Sie geben das Versprechen, andere Welten
           zu erleben, Dinge zu tun die im normalen Leben nicht gehen, jemand
@@ -57,11 +58,23 @@
       </section>
 
       <section class="crowdfunding">
-        <img src="img/bbg.png" />
-        <img src="img/SDJ.png" />
+        <figure class="collection">
+         <img src="img/bbg.png" /> 
+         <figcaption>
+            50 bestbewerteten Spiele des Forums boardgamegeek.com
+         </figcaption>
+        </figure>
+        <figure class="collection">
+          <img src="img/SDJ.png" />
+          <figcaption>
+              40 Spiele, die seit 1979 mit
+              dem Preis des „Spiel des Jahres” ausgezeichnet wurden
+          </figcaption>
+        </figure>
+        
       </section>
 
-      <section>
+      <section class="Jorvik-relative">
         <h3>Wird in der Anleitung gegendert?</h3>
         <p>
           Bevor es mit dem Spielen losgeht, muss erst einmal die Anleitung
@@ -75,29 +88,21 @@
           darüber ins Gespräch zu kommen, wie es sich anfühlt, „mitgemeint” zu
           sein.
         </p>
-        <!-- <div class="step white" data-step="0"></div> -->
-        <div class="zero">0%</div>
-        <!-- <div id="svgPercentage"></div> -->
-      </section>
-      <section id="scrolly">
-        <div class="step"  data-step="0">
-          <article>
-            <p class="no-margins mentionStyle">Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen.</p>
-          </article>
-            
-           <div class="mentionPos">
-             <svg
-            id="mention1"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 200 200"
-          ></svg>
-           </div> 
-              
+        <div class="step zero" data-step="0">
+          <span class="first">0%</span>
+          <span class="second">der analysierten Spiele haben gegenderte Anleitung</span>
         </div>
+
+        <aside class="Jorvik">
+            <div class="Jorvik-flex">
+                <img class="HonorableMention" src="images/HonorableMention/Jorvik.jpg">
+              <p class="no-margins mentionStyle">Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen.</p>
+            </div>        
+        </aside>
+      </section>
+      
+      <section id="scrolly">
+        
           <h2 class="char-h2">Charaktere</h2>
           <div class="gallerySvgCharacters">
             <article class="articleChar">
@@ -107,8 +112,8 @@
                   spielen möchte oder bekommt einen Charakter zugelost. In vielen
                   Spiele sind dies menschlich oder menschenähnliche Charaktere, im
                   folgenden Abschnitt behandeln wir nur Spiele in denen solche
-                  Charaktere vorkommen. Männer gibt es dabei praktisch immer,
-                  Frauen seltener und Trans*Menschen so gut wie nie, es sei denn
+                  Charaktere vorkommen. <span class="Männer">Männer</span> gibt es dabei praktisch immer,
+                  <span class="Frauen">Frauen</span> seltener und Trans*Menschen so gut wie nie, es sei denn
                   es gibt Aliens. Guckt man sich die Charaktere genauer an, hat
                   man es häufig mit sehr stereotypen Darstellungen zu tun. Männer
                   sind gute Kämpfer und Frauen unterstützen zum Beispiel als
@@ -129,12 +134,11 @@
                 ></svg>
               </div>
             </article>   
-            <article>   
+            <article class="articleChar">   
               <figure class="characters">
                 <p>
                   Ist man dann noch nicht-weiß, hat man geringe Chancen, im Spiel
-                  vertreten zu sein. Kaum ein Spiel bietet die Möglichkeit, People
-                  of Color zu spielen. Die Gründe hierfür sind sicherlich
+                  vertreten zu sein. Kaum ein Spiel bietet die Möglichkeit, <span class="Frauen">People of Color</span> zu spielen. Die Gründe hierfür sind sicherlich
                   vielfältig. Zum einen sind fast alle Spieleautor*innen weiß,
                   ähnlich sieht es bei den Illustrator*innen aus. Hinzu kommt das
                   Phänomen, dass viele Spiele eurozentristisch sind und People of
@@ -157,11 +161,11 @@
                 ></svg>
               </div>
             </article>   
-            <article> 
+            <article class="articleChar"> 
               <figure class="characters">
                 <p>
                   Ein weniger offensichtliches Problem ist die Frage der
-                  „Normschönheit”. Anscheinend ist es einfach normal, dass alle
+                  <span class="Frauen">„Normschönheit”</span>„Normschönheit”. Anscheinend ist es einfach normal, dass alle
                   Figuren, genau wie in Filmen und Serien, wie Models aussehen.
                   Alle sind fit, haben definierte Körper, volles Haar und
                   stereotyp schöne Gesichter. Aber muss das wirklich so sein?
@@ -182,22 +186,19 @@
                 ></svg>
               </div>
             </article>   
-            <div class="mention step" data-step="4">
+            <div class="mentionWV step" data-step="4">
+                <img class="HonorableMentionWV" src="images/HonorableMention/Winziges_Verlies.jpg">
                 <article class="mentionStyleTwo">
-                    <p class="no-margins ">Winziges Verlies - Bei den Charakteren geht “Winziges Verlies” einen besonderen Weg, alle spielbaren Charaktere, beziehungsweise Heldinnen, sind nämlich weiblich, einfach so, ohne es besonders zu bewerben.</p>
+                    <p class="no-margins no-padding mentionStyle ">Winziges Verlies - Bei den Charakteren geht “Winziges Verlies” einen besonderen Weg, alle spielbaren Charaktere, beziehungsweise Heldinnen, sind nämlich weiblich, einfach so, ohne es besonders zu bewerben.</p>
                 </article>
-                <svg
-                id="mention2"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 200 200"
-              ></svg>  
             </div>
+            <!-- <aside class="Jorvik">
+                <div class="Jorvik-flex">
+                    <img class="HonorableMention" src="images/HonorableMention/Jorvik.jpg">
+                  <p class="no-margins mentionStyle">Jórvík - Ursprünglich 2010 unter dem Titel “Die Speicherstadt” bei eggertspiele erschienen, ist die Neuauflage Jórvík, jetzt im Verlag Pegasus Spiele, etwas besonderes. Anders als als bei allen anderen Spielen benutzt die Anleitung durch die weibliche vorm, spricht also von Spielerinnen und schafft es damit zumindest mit seinen Mitspieler*innen übers gendern in Anleitungen ins Gespräch zu kommen.</p>
+                </div>        
+            </aside> -->
           </div>
-          
         </article>
         <article id="articleAuth">
           <div class="authors">
@@ -210,10 +211,7 @@
               Veränderung ist in beiden Fällen kaum zu beobachten.
             </p>
             <h2 class="no-padding">Autor*innen</h2>
-            <div class="step game-boxes " data-step="5">
-                <div id="tooltipAuth">
-                  <div id="tipSVG"></div>
-                </div>
+            <div class="step game-boxes " data-step="4">                
                 <svg
                   id="gallerySvgAuthor"
                   class="svgBoxesAll"
@@ -227,9 +225,11 @@
                     <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
                    </filter>
               </svg>
+              <span class="bggCaption">Spiele des Forums boardgamegeek.com</span> 
+              <span class="SDJCaption">Spiele mit dem Preis des „Spiel des Jahres” </span>
             </div>
             <h2 class="no-padding">Illustrator*innen</h2>
-            <div class="step game-boxes" data-step="6">
+            <div class="step game-boxes" data-step="5">
                 <div class="tooltip"></div>
                 <svg
                   id="gallerySvgIllustrators"
@@ -245,14 +245,22 @@
                     <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"/>
                    </filter>
               </svg>
+              <!-- <span class="bggCaption2">Spiele des Forums boardgamegeek.com</span> 
+              <span class="SDJCaption2">Spiele mit dem Preis des „Spiel des Jahres” </span> -->
             </div>
           </div>
         </article>
-        <div class="mention-3 step" data-step="7">
-            <article>
+        <div>
+            <!-- <article>
                 <p class="no-margins mentionStyle">Wingspan (Flügelschlag) - Mit seinem ausschließlich weiblichen Team geht Flügelschlag sehr erfolgreich neue Wege und macht subtil darauf aufmerksam wie unterrepräsentiert Frauen im Spielemarkt sind.</p>
-              </article>
-            <svg
+              </article> -->
+              <aside class="Jorvik step" data-step="6">
+                  <div class="Jorvik-flex">
+                      <img class="HonorableMention" src="images/HonorableMention/Wingspan.jpg">
+                    <p class="no-margins mentionStyle">Wingspan (Flügelschlag) - Mit seinem ausschließlich weiblichen Team geht Flügelschlag sehr erfolgreich neue Wege und macht subtil darauf aufmerksam wie unterrepräsentiert Frauen im Spielemarkt sind.</p>
+                  </div>        
+              </aside>
+            <!-- <svg
             id="mention3"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -260,10 +268,10 @@
             x="0px"
             y="0px"
             viewBox="0 0 200 200"
-          ></svg>
+          ></svg> -->
         </div>
       </section>
-      <section class="conclusion">
+      <section class="conclusion" >
         <h2>FAZIT</h2>
         <p>
           Zusammenfassend kann man sagen, dass die Spielewelt von weißen Männern
@@ -281,6 +289,9 @@
         </p>
       </section>
     </main>
+    <div id="tooltipAuth">
+      <div id="tipSVG"></div>
+    </div>
   </body>
   <!-- <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script> -->
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>

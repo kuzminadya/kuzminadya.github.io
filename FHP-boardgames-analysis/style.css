@@ -42,18 +42,27 @@ body {
   position: absolute;
   visibility: hidden;
   padding-right: 5rem;
-  background: white;
+  background: #f5f6f7;
+  padding: 2rem;
   max-width: 300px;
   white-space: normal;
   border-radius: 4px;
   pointer-events: none;
-  right: 10px;
+  /* right: 10px; */
   font-family: "Fjalla_One", sans-serif;
   color: #060857;
   font-size: 24px;
   text-align: left;
+  /* box-shadow: 10px 5px 5px lightgray; */
 
   /* font-family: sans-serif; */
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 45.68%;
 }
 
 main {
@@ -78,15 +87,20 @@ section {
 h1 {
   padding-top: 24rem;
   font-family: "Fjalla_One", sans-serif;
-  color: white;
+  /* color: white; */
+  color: #060857;
   /* -webkit-text-stroke: 0.1px #060857; */
   /* text-stroke: 0.5px #060857; */
   font-size: 90px;
+  position: absolute;
+  left: 15vw;
+  bottom: 20px;
   text-align: start;
   margin: 0;
   line-height: 1.2;
   margin: 5rem 0;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 h1 span {
@@ -120,7 +134,7 @@ h3 {
 }
 
 #intro {
-  /* padding: 0 10rem; */
+  padding-top: 6rem;
   text-align: center;
   margin-bottom: 10px;
   display: flex;
@@ -143,15 +157,30 @@ section.crowdfunding {
   align-content: flex-start;
 }
 
-img {
+figure.collection img {
   display: inline-block;
   align-self: center;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #060857;
+  max-width: 400px;
+  white-space: normal;
 }
 
 .character-image {
   height: 200px;
   float: center;
   padding: 1rem;
+}
+
+.Männer {
+  color: #0e28ee;
+}
+
+.Frauen {
+  color: #a57c1b;
 }
 
 article {
@@ -163,10 +192,6 @@ article {
 figure {
   margin: 0;
 }
-
-/* .is-active {
-  opacity: 0;
-} */
 
 #scrolly {
   position: relative;
@@ -183,40 +208,136 @@ figure {
   color: #060857;
   font-size: 120px;
   text-align: left;
-  padding-left: 10rem;
-  padding-top: 2rem;
+  /* padding-left: 5rem; */
+  padding: 6rem 5rem;
   margin: 0;
   font-style: bold;
   line-height: 1.2;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+}
+
+.zero span.second {
+  font-size: 48px;
+  white-space: normal;
+  line-height: 1.4;
+  margin-left: 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.zero.step.is-active {
+  animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+
+.zero.step.is-active span.first {
+  animation-delay: 0.5s;
+}
+/* .zero.step.is-active span.second {
+  animation-delay: 3s;
+} */
+
+.Jorvik-relative {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.Jorvik {
+  right: 50px;
+  /* float: left; */
+  bottom: 7rem;
+  position: absolute;
+  font-size: 12px;
+  /* color: #060857; */
+}
+
+.Jorvik p {
+  padding: 1rem 0 0 0;
+  max-width: 300px;
+}
+
+.Jorvik-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .mentionStyle {
-  font-family: "Fjalla_One", sans-serif;
-  color: #a57c1b;
-  font-size: 24px;
-  width: 700px;
+  /* font-family: "Fjalla_One", sans-serif; */
+  /* color: #a57c1b;
+  font-size: 24px; */
+  width: 40vw;
   margin-left: -8rem;
 }
 
+.HonorableMention {
+  width: 200px;
+  height: 200px;
+}
+
+.HonorableMentionWV {
+  width: 400px;
+  height: 300px;
+}
+
 .mentionStyleTwo {
-  font-family: "Fjalla_One", sans-serif;
-  color: #a57c1b;
-  font-size: 24px;
-  width: 700px;
+  /* font-family: "Fjalla_One", sans-serif; */
+  color: white;
+  font-size: 14px;
+  width: 200px;
   float: right;
-  margin-right: 24rem;
+  /* margin-right: 24rem; */
+  margin-left: 20px;
   padding: 0px;
 }
 
-/* .mentionPos {
-  position: absolute;
-  top: 0;
-  right: 20px;
-} */
+.mentionWV {
+  display: flex;
+  flex-direction: row;
+  /* padding: 0rem 2rem 4rem 2rem; */
+  justify-content: center;
+  padding-bottom: 4rem;
+}
 
 .instruction {
   padding: 0 20vw 0 15vw;
 }
+
+.bggCaption {
+  position: absolute;
+  right: 300px;
+  top: 720px;
+}
+
+.SDJCaption {
+  position: absolute;
+  right: 280px;
+  top: 360px;
+}
+
+/* .bggCaption2 {
+  position: absolute;
+  right: 300px;
+  bottom: 640px;
+} */
+
+/* .SDJCaption2 {
+  position: absolute;
+  right: 280px;
+  bottom: 270px;
+} */
 
 p.no-margins {
   margin: 0;
@@ -228,7 +349,7 @@ p.no-padding {
 
 .char-h2 {
   background-color: #161116;
-  padding: 4rem 0 2rem 15vw;
+  padding: 4rem 0 4rem 15vw;
 }
 
 .gallerySvgCharacters {
@@ -251,7 +372,9 @@ article {
 
 .SvgCharClass {
   /* margin-top: 100px; */
-  margin-top: 12vh;
+  /* margin-top: 12vh; */
+  /* margin-top: 2rem;
+  margin-bottom: 2rem; */
   margin-left: 100px;
 }
 
@@ -279,6 +402,10 @@ figure.characters p {
   /* font-size: 8rem;
   font-weight: 900; */
   /* color: #fff; */
+}
+
+.articleChar {
+  margin: 0 0 4rem 0;
 }
 
 div.step.category {
@@ -310,7 +437,7 @@ div.step.category {
   svg#gallerySvgCharW.SvgCharClass
   g
   rect.Nichtweiße_C_G {
-  fill: grey;
+  fill: lightgrey;
 }
 
 .step.category.is-active
@@ -324,7 +451,7 @@ div.step.category {
   svg#gallerySvgCharB.SvgCharClass
   g
   rect.Nicht_normschön_G {
-  fill: grey;
+  fill: lightgrey;
 }
 
 .Nicht_männliche_C {
@@ -392,13 +519,13 @@ div.game-boxes {
 }
 
 .authors {
-  padding: 1rem;
+  padding: 4rem 0;
 }
 
 .conclusion {
   background-color: #0c121c;
   color: antiquewhite;
   padding: 0 20vw 0 15vw;
-  padding-bottom: 25rem;
+  padding-bottom: 14rem;
   /* padding: 2rem 10rem 10rem 2rem; */
 }
