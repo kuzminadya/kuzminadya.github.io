@@ -59,6 +59,7 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
     d.Nichtweiße_C = d.Nichtweiße_C;
     d.Nicht_normschön = d.Nicht_normschön;
     d.Anleitung_gegendert = d.Anleitung_gegendert;
+    d.Autorinnen = d.Autorinnen;
     d.AutorM = +d.AutorM;
     d.AutorW = +d.AutorW;
     d.IllustrM = +d.IllustrM;
@@ -189,6 +190,8 @@ d3.csv("boadrgame-data2ver-test.csv", function(err, data) {
         "<br>" +
         d.Erscheinungsjahr +
         "<br><br>" +
+        "Non-binary: 0" +
+        "<br>" +
         "Frauen: " +
         d.AutorW +
         "<br>" +

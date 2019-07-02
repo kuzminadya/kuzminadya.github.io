@@ -1,4 +1,4 @@
-Number,NameID,Name,image_path,Erscheinungsjahr,menschliche_Darstellungen,Nicht_männliche_C,Nichtweiße_C,Nicht_normschön,Anleitung_gegendert,Autor*innen?,AutorM,AutorW,Illustrator*innen,IllustrM,IllustrW,xcoordinate,ycoordinate,xcoordinate2,ycoordinate2
+Number,NameID,Name,image_path,Erscheinungsjahr,menschliche_Darstellungen,Nicht_männliche_C,Nichtweiße_C,Nicht_normschön,Anleitung_gegendert,Autorinnen,AutorM,AutorW,Illustrator*innen,IllustrM,IllustrW,xcoordinate,ycoordinate,xcoordinate2,ycoordinate2
 1,Gloomhaven,Gloomhaven,images/Gloomhaven.jpg,2017,ja,ja,ja,x,nein,m,1,0,mmm,3,0,0,10,0,10
 2,Pandemic_Legacy:_Season_1,Pandemic Legacy: Season 1,images/PandemicLegacy Season1.jpg,2015,ja,ja,ja,nein,nein,m,1,0,mm,4,0,100,10,220,10
 3,Through_the_Ages:_A_New_Story_of_Civilization,Through the Ages: A New Story of Civilization,images/ThroughtheAgesANewStoryofCivilization.jpg,2015,ja,ja,nein,nein,nein,m,1,0,mmmm,4,0,200,10,440,10
