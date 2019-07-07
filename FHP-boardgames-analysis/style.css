@@ -489,6 +489,11 @@ div.step.category {
 div.game-boxes {
   display: block;
   padding: 2rem 0;
+  margin-left: 10vw;
+}
+
+div.game-boxes figcaption {
+  text-align: left;
 }
 
 .images {
