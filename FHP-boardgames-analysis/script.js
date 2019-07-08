@@ -13,7 +13,7 @@ var figure = article.selectAll(".characters");
 var boxes = scrolly.selectAll(".svgBoxesAll");
 
 ///SVG
-var boxesSize = Math.round((window.innerWidth - 200) / 15);
+var boxesSize = Math.round((window.innerWidth - 100) / 12);
 
 var tooltip = d3.select("#tooltipAuth");
 
