@@ -506,3 +506,11 @@ div.game-boxes figcaption {
     padding-left: 18vw;
   }
 }
+
+@media screen and (max-width: 768px) {
+article.articleChar{
+  padding-bottom: 10rem;
+  font-size: 13px;
+
+}
+}
