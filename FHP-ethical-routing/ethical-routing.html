@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="css/style.css" />
+      <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+      <script src="https://unpkg.com/scrollama"></script>
+      <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+      <link
+         href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css"
+         rel="stylesheet"
+      />
+      <title>Ethical Routing</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <main>
+         <div class="title">
+            <h1>Ethical Routing</h1>
+            <div class="animated-map">
+               <img src="/images/map_30_routes.svg" alt="pixel art map" />
+            </div>
+         </div>
+         <div class="container">
+            <section class="intro text">
+               <article>
+                  <h2>
+                     In algorithms we trust
+                  </h2>
+               
+                  <p>
+                     At the onset of the 21st century we live in a time where mathematical algorithms are increasingly interfering with the lives of biological beings. From personalized consumption suggestions on Amazon, through matching on Tinder or vote suggestions on Facebook to the seemingly immaculate navigation with Google Maps worldwide – algorithms have become our constant invisible companions on whose recommendations we base our decisions. The logic applied is non-stop optimisation. Optimized choice, optimized love and in case of Google Maps – dear car drivers – routes optimized by your individual time alone. So in algorithms we trust. Often almost blindly.
+                  </p>
+                  
+                  <h2>
+                     City as Infrastructures
+                  </h2>
+                  
+                     <p>
+                     Let’s take a look at the city as context of observation. Big contemporary urban hubs, like New York, Hong Kong or Berlin consist of infinite entangled infrastructures.
+                     </p> 
+
+                     <p>
+                     From the deep mapping point of view expressed by Shannon Mattern in Deep Mapping the Media City <mark style="background-color:#ffffff; opacity: 0.75; color:#170DF8;">the city is a “complex system composed of interconnected layers of social and biogeochemical processes”.</mark> It means that fluctuating infrastructures of human needs like sleep and safety are deeply entangled with static infrastructures of solid roads, buildings and other urban areas – e.g. educational institutions, residential and leisure areas.
+                     </p> 
+
+                     <p>
+                     <!-- <mark> -->
+                        The invisible net of algorithms that guide Google Maps through those infrastructures comes on top – as a conceptual infrastructure in its own right.
+                     <!-- </mark>  -->
+                     
+                     Be aware that conceptual infrastructures have the power to shape physical ones. Like this: if we consider infrastructure as a relationship and not a thing then Google Maps along with its own conceptual standards becomes one interactive gateway into the city. Tapered one could say that us humans become like the algorithmic app. We surrender our orientation to Google Maps and let ourselves be told how and where to go.
+                     </p>
+                  
+               
+               </article>
+            </section>
+            <section id="scrolly">
+               <figure>
+                  <div id="map">
+                  </div>
+               </figure>
+               <article>
+                  <div class="map-layers step" data-step="0">
+                     <h2>
+                        City as Infrastructures
+                     </h2>
+                     <img class="legend" src="/images/layout_legend.svg" alt="legend on a map" />
+                  </div>
+                  
+                  <div class="trust text">
+                     <h2>
+                        Trust in Maps
+                     </h2>
+                     
+                    
+                        <p>
+                        Google Maps is one of the worlds most used navigation apps. 
+                        <!-- <mark> -->
+                           As a service it is awfully pragmatic and successful in implementing algorithms into our daily lives.
+                        <!-- </mark>  -->
+                        Via our smart phones it influences the flow of traffic in our cities, districts and streets. 
+                        </p>
+
+                        <p>
+                        As contemporary citizens we trust maps almost unconditionally. Natural, because we were socialized with maps growing up. To us maps represent a more orderly life by means of abstraction than its more chaotic impression in real life. A life that is easier to live. To navigate the area around Tempelhofer Feld in Berlin for example is to follow a calm woman’s voice or a blue arrow on white ground – there is no stress like reading street signs while driving.
+                        </p>
+                     <h2>
+                        Navigation Apps
+                     </h2>
+                        <p>
+                        <a href="https://eta.lbl.gov/people/jane-macfarlane">Jane Macfarelane</a> the director of the 
+                        <a href="https://www.its.berkeley.edu/SmartCities">Smart Cities Research Center</a> at the University of California Berkeley’s Institute of Transportation Studies, who focuses on data analytics for emerging
+                        transportation issues explains in  <a href="https://spectrum.ieee.org/computing/hardware/your-navigation-app-is-making-traffic-unmanageable"><i>Your Navigation App Is Making Traffic Unmanageable</i></a> 
+                        why navigation apps have become so problematic over time.
+                        </p>
+                        <p>
+                        The base road maps, on which navigation apps were build, represent roads as functional classes, like a highway or a residential street. Each class is designed to accommodate a different number of cars moving through per hour at speeds that are adjusted for local conditions. Early navigation systems have used this information in their algorithms to calculate likely travel time and to select the best route. When navigation capabilities moved to smartphones, providers like Google Maps began collecting travel speeds and locations from users who were willing to let the app share their information. The providers then used these GPS traces as data in algorithms designed to estimate realistic speeds on the roads at different times of day.
+                        </p>
+                        <p>
+                        From 2013 onwards as GPS traces grew and the cellular networks improved developers started providing traffic information to users in nearly real time. 
+                        <!-- <mark> -->
+                           Google Maps began offering real-time rerouting suggestions, considering current traffic above the characteristics of the road network.
+                        <!-- </mark>  -->
+                        That gave their users opportunities to get around traffic slowdowns, to save their own precious time.
+                        </p>
+                        <p>
+                        “And that’s how the chaos began” – Macfarelane states.
+                        </p>
+                     
+                  </div>
+                  
+                  <div class="city-planners text">
+                     <h2>
+                        City Planners and Google Maps
+                     </h2>
+                     <!-- --- insert a class for urban mobility here -->
+                     <div class="city-planners-container">
+                        <div class="city-planners-wrapper">
+                           <p>
+                           When cities grew city planners have predicted traffic on the basis of residential density, anticipating that a certain amount of real-time changes will be necessary in particular circumstances. To handle those changes, they have installed state sanctioned tools like stoplights, message signs, radio transmissions, traffic police officers, etc. They were looking out for the city as a whole.  
+                           </p>
+                           <p>
+                           Google as a private company with profit interests on the other hand optimized its service to one goal alone – to keep an individual driver’s travel time as short as possible. One could argue that by doing so Google Maps hacked the city’s traffic regulation and implemented a workaround. But since this workaround disregards the system as a whole, it does not improve the traffic flow of the city – making it instead only more difficult to regulate.
+                           </p> 
+   
+                           <p>
+                           Mcfarelane’s analysis is on point when she writes 
+                           <!-- <mark> -->
+                              “Algorithms don’t care whether the residential streets are bothered by noise or whether cars that show up in unexpected places may compromise safety”
+                           <!-- </mark> -->
+                           . What could it mean for example that navigation apps do not account for the peculiarities of a given neighborhood? Well, it may mean that a detour is routed along sensitive locations, such as a kindergarten or a residential area. The algorithm only sees the time optimization of the driver, it does not see the negative effects that it causes.
+                           </p>
+                           
+                           <p> 
+                           The egocentricity of navigation services like Google Maps is also a serious problem from a second point of view – the lack of cooperation with others. 
+                           <!-- <mark> -->
+                              Companies like Google neither work with other navigation service providers nor – and this is crucial – with city planners.
+                           <!-- </mark>  -->
+                           Their data has no open access and is therefore not free for all. 
+                           </p>
+   
+                           <p> 
+                           And so city planners are working in isolation, with incomplete information, because they have no idea what the apps are going to do at any moment. The city now loses its understanding of the amount of traffic demanding access to its roads. That’s a safety issue in the short term and a planning issue in the long term: It blinds the city to information it could use to develop better traffic-mitigation strategies.  
+                           </p>
+   
+                           <p>Sharing is caring. Big players like Google Maps must be convinced that if they share their information with others, the rerouting algorithms could consider a far bigger picture.
+                           </p>
+                        </div>
+                        <div>
+                           <img src="/images/papers_xls.svg" alt="pixel art map" class="papers-img" />
+                        </div>
+                     </div>   
+                     <h2>
+                        Urban mobility and noise
+                     </h2>
+                        <p>
+                        Urban traffic is directly linked to the health of city dwellers. Road traffic is by far the most frequently named main noise source in urban areas, according to the German federal environmental agency, the <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm">Umweltbundesamt</a>. 
+                        </p> 
+
+                        <p>
+                        <!-- <mark> -->
+                           Noise is a perceptible environmental problem.
+                        <!-- </mark>  -->
+                        High sound levels as well as chronic noise stress not only affect the well-being of people and animals. They can cause serious illness. The exposure of city dwellers to noise must be determined for the entire day and separately for the night – as the effects of night-time noise pollution are much more serious. 
+                        </p>
+
+                        <p>
+                        There are particularly affected groups. Since children spend more time in bed than adults, they are exposed to night-time noise to a greater extent. Chronically ill and elderly people are generally more susceptible to disturbance. In general, low-income population strata are disproportionately affected because they cannot afford to live in quiet residential areas.
+                        </p>
+                     
+                  </div>
+
+                  <div class="noise-maps-wrapper">
+                     <h2 class="sticky-on-map">
+                        urban mobility and noise
+                     </h2>
+                     <img class="legend-noise sticky-on-map" src="/images/legend_noise_map.svg" alt="legend on a map" />
+                     <div class="map map-noise step" data-step="1">
+                        
+                     </div>
+                     <div class="map map-noise step" data-step="2">
+                     </div>
+                     
+                  </div>   
+                  <div class="map map-noise step" data-step="3">
+                  </div>
+                  <div class="interim-result quote text">
+                     <div>
+                        <h2>
+                           Interim Result
+                        </h2>
+                        <p>
+                           Navigating the city is not simply moving from A to B. Driving through the city is interacting with the infrastructure of the whole city. Moving around the city is as much about showing consideration for your fellow city dwellers as it is about you reaching your own destination. Our project aim aligns with Mcfarelane’s to make people see, that most car drivers, when well informed, would be open to a little inconvenience in the furtherance of the common good.
+                        </p>
+                     </div>
+                  </div>
+                  
+                  <div class="map map-data-walk step" data-step="4">
+                     <h2>
+                        let’s take a data walk 
+                     </h2>
+                     <img class="legend" src="/images/data-walk.svg" alt="legend on a map"/>
+                     <div class="traffic-density">
+                        <p>
+                           The area we are looking at up close is Tempelhofer Feld along with its surroundings. It is is a 355 ha recreational area that is located south of the Berlin city centre and extends over district parts of Neukölln and Tempelhof. It is the largest inner-city open space in the world and Berlins largest city park. Berliners love this vastness and successfully resists development and gentrification projects. Living space around it is extremely sought after. But the most famous fact about it is that until 2008 it used to be an airport. Against this background, the traffic infrastructure around the open space itself is worth examining.
+                        </p>
+                        <h3>
+                           Traffic Density Data Set
+                        </h3>
+                        <p>
+                           The traffic density data set that is visualised here was kindly provided to us by civity a company focusing on improving the quality of life in public spaces by means of data analytics and change management. 
+                        </p> 
+                          
+                        <p>
+                        The set consists of 3.500 different trips around the Tempelhofer Feld based on so called origin-destination pairs. This means we got trips that begin in a starting point and end in an end point. The Routing was done for cars only on February 5th 2019 from 8 to 10 a.m., which means that we see a regular Tuesday for car drivers in a big city. We analysed it in terms of alternative possibilities. 
+                        </p>
+                        <h3>Sensitive Locations Data Set </h3>
+                        <p>In every city there are locations that are particularly sensitive in relation to noise and safety. These include, for example: Kindergardens, preschools, schools, universities, playgrounds, residential areas, senior residences, nursery homes and hospitals. With geospatial data sets taken from internet platforms like <a href="https://www.geofabrik.de"> Geofabrik</a>, <a href="http://www.stadtentwicklung.berlin.de/geoinformation/fis-broker"> FIS-Broker</a>, <a href="https://www.openstreetmap.org"> OpenStreetMap</a>, etc. we created a sensitive layers map, that highlights those sensitive locations. 
+                        </p>
+                        <p>
+                        By conceptually connecting the two data sets and visually superimposing the two maps, one gets a sense of how ethical routing could be established.   
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="map map-data-walk five-min step" data-step="5">
+                     <span class="biggest-text">
+                        five minutes – what you loose and everybody gains
+                     </span>
+                  </div>
+                  <div class="map map-data-walk step" data-step="6" >
+                     
+                     
+                  </div>
+               </article>
+            </section>
+            <section class="conclusion text">
+               <article>
+                  <h2>
+                     safety case study
+                  </h2>
+				  
+				  <div>
+					<p>
+						Here you can see a short case study with a focus on the topic of safety.
+					</p>
+				  </div>	
+
+
+                  <div>
+                     <video controls autoplay loop>
+                        <source src="/video/Mapping_User_Case_Study_5.mp4"
+                        type="video/mp4">
+                     </video>
+                  </div>
+                  
+                  <p>
+                     Dr. Dana Meisner lives on Okerstraße 37 east of Tempelhofer Feld and works at the St. Joseph Hospital located in the west on the other side. She is a paediatric surgeon, and often treats children, who got into traffic accidents on their way to kindergarten or school.
+                  </p>
+                  <p>
+                     Dr. Meisner commutes to work by car but she never consciously thought about her route. She simply is not aware that she too passes sensitive locations like kindergartens on her way. By choosing a commute route more deliberately she accepts that it takes 5 minutes longer, but instead of passing two playgrounds and a a school with affiliated kindergarten, she only passes one playground.
+                  </p>
+                     
+                  <p>
+                     This way the city becomes safer for children, who might otherwise end up as her patients.
+                  </p>  
+                     
+                     
+                  <p>
+                     
+                     The case studies show that a slight but conscious change in the choice of your individual route can greatly benefit a larger group of people. 
+                        
+                  </p>
+                  <h2>
+                     In Conclusion
+                  </h2>
+                  <p>
+                     <p>
+                     Navigating the city is not simply moving from A to B. Driving through the city is interacting with the infrastructure of the whole city. Moving around the city is as much about showing consideration for your fellow city dwellers as it is about you reaching your own destination. 
+                     </p>
+
+                     <p>
+                     It is in the nature of man to adapt to almost everything – even the most adverse circumstances, like constant noise pollution or being on alert. Against this background, the implementation of new and further algorithms must always be accompanied critically. 
+                     <!-- <mark> -->
+                        Algorithms are for humans, not the other way around.
+                     <!-- </mark>  -->
+                      </p>
+
+                     <p>
+                     Algorithms themselves are in need of a basis for decision making. And here is where decision makers and developers come into play. Biological human needs need to be cast in mathematical formulas and logical conditions. The different need values of city dwellers must be taken into consideration when writing navigation algorithms in the future as much as the time value today.
+                     </p>
+
+                     <p>
+                     With the emergence of big data, we have more and more information units at our disposal. More information means more complexity, but it also means more accurate algorithms. 
+                     <!-- <mark> -->
+                        With the right use of big data we can apply more humane mathematical formulas to our needs.
+                     <!-- </mark>  -->
+                     </p>
+
+                     <p>
+                     We believe, that navigation apps like Google Maps can become better by sharing their data and collaborating with city planners. One approach could be a small extension in the data collection and prioritisation. Why not empower city planners or local authorities, with an interactive interface that communicates to the developers the certain need values that apply at a specified time and location? 
+                     </p>
+
+                     <p>
+                     In any case – appreciating the entanglement of algorithms and human life will help us as a society to move towards a future more enjoyable and humane. 
+                     </p>
+                  </p>
+
+               </article>
+            </section>
+            <section class="thanks quote text">
+               <span class="">
+                  Thank you for your attention. Have a responsible trip!
+               </span>
+            </section>
+            
+            <section class="reference text">
+               <article>
+                  <h2>
+                     Authors
+                  </h2>
+                  
+                  <img src="/images/Nadja.svg" alt="Nadja's portrait" class="portrait" />
+                  <p><a href="http://nadyakuzmina.com/">Nadezda Kuzmina</a> – Nadya is an interfacedesign bachelor student at the <a href="https://www.fh-potsdam.de/design/"> University of Applied Sciences Potsdam</a> and a devoted developer
+                  </p> 
+                  
+                  <img src="/images/Anna.svg" alt="Anna's portrait" class="portrait" />
+                  <p><a href="https://github.com/annameide">Anna Meide</a> – Anna is an interfacedesign bachelor student at the <a href="https://www.fh-potsdam.de/design/"> University of Applied Sciences Potsdam</a> and a life loving UX rookie
+                  </p> 
+                  
+                  <img src="/images/Anne.svg" alt="Anne's portrait" class="portrait" />
+                  <p><a href="linkedin.com/in/anne-liese-lammich-a685a417a"> Anne Lammich</a> – Anne is an urban futures master student at the <a href="https://www.fh-potsdam.de/studieren/fachbereiche/stadt-bau-kultur/studiengaenge/urbane-zukunft-ma/"> University of Applied Sciences Potsdam</a> and architecture lover
+                  </p>
+               
+               </article>
+
+               <article>
+                  <h2>
+                     Cooperation Partners
+                  </h2>
+                  <p>
+                     <a href="https://civity.de/de/">Civity Management Consultants</a> 
+                  </p>
+               </article>
+
+               <article>
+                  <h2>
+                     Special Thanks
+                  </h2>
+                  <p>
+                     <a href="https://mariandoerk.de/">Prof. Marian Dörk</a> from the <a href="https://uclab.fh-potsdam.de/"> Urban Complexity Lab</a> at the <a href="https://www.fh-potsdam.de/"> University of Applied Sciences Potsdam</a> for the constant support<br /> 
+                     <a href="https://uclab.fh-potsdam.de/people/francesca-morini/"> Francesca Morini</a> from the <a href="https://uclab.fh-potsdam.de/"> Urban Complexity Lab</a> at the <a href="https://www.fh-potsdam.de/"> University of Applied Sciences Potsdam</a> for the constant support <br /> 
+                     <a href="https://civity.de/de/menschen/andr%C3%A9-klein/"> André Klein</a> from <a href="https://civity.de/de/"> Civity Management Consultants</a> for providing the traffic data set
+                     <br />
+                     <a src="https://djr.com/output/">David Jonathan Ross</a> and <a src="https://ecal-typefaces.ch/">ECAL/University of Art and Design Lausanne</a> for providing fonts for students in their academic work 
+                  </p>
+               </article>
+
+               <article>
+                  <h2>
+                     References
+                  </h2>
+                  <ul class="list" style="list-style-type:none;">
+                       <li>Mattern, Shannon: <i>Deep Mapping the Media City</i> </li>
+                       <li><a href="https://highline.huffingtonpost.com/articles/en/poor-millennials">Hobbes, Michael: <i>Poor Millennials</i></a></li>
+                       <li><a href="https://spectrum.ieee.org/computing/hardware/your-navigation-app-is-making-traffic-unmanageable">Macfarlane, Jane: <i>Your Navigation App Is Making Traffic Unmanageable</i></a></li>
+                       <li><a href="https://www.sueddeutsche.de/leben/schlafforschung-naechtlicher-laerm-macht-krank-1.31456">Sueddeutsche Zeitung: <i>Naechtlicher Laerm macht krank</i></a></li>
+                       <li><a href="https://www.umweltbundesamt.de/daten/umwelt-gesundheit/gesundheitsrisiken-durch-umgebungslaerm">Umweltbundesamt: <i>Gesundheitsrisiken durch Umgebungslaerm</i></a></li>
+                       <li><a href="https://www.umweltbundesamt.de/sites/default/files/medien/378/publikationen/texte_16_2016_laermbilanz_2015.pdf">Umweltbundesamt: <i>Laermbilanz 2015</i></a></li>
+                       <li><a href="https://www.umweltbundesamt.de/sites/default/files/medien/publikation/long/3203.pdf">Umweltbundesamt: <i>Laerm, das unterschaetzte Risiko!</i></a></li>
+                     </ul>
+               </article>
+               <!-- add content -->
+               <article>
+                  <h2>
+                     Further Reading
+                  </h2>
+                     <ul class="list" style="list-style-type:none;">
+                       <li><a href="https://onezero.medium.com/how-googles-bad-data-wiped-a-neighborhood-off-the-map-80c4c13f1c2b">Dewey, Caitlin: <i>How Google’s Bad Data Wiped a Neighborhood off the Map</i></a></li>
+                       <li><a href="https://www.spiegel.de/netzwelt/apps/15-jahre-google-maps-die-unterschaetzte-macht-a-a00f688b-3763-4f9a-b4f7-bfe152ef3016"> Beuth, Patrick: <i>Google Maps, die unterschätzte Macht</i></a></li>
+                       <li><a href="https://www.zeit.de/mobilitaet/2020-01/navis-verkehrslage-navigationsgeraete-schnellste-route-tomtom/seite-2">zeit.de: <i>Navis – Verkehrsführung ist Aufgabe der Stadt</i></a></li>
+                       </ul>
+               </article>
+            </section>
+         </div>
+      </main>
+      
+      <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+      <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+      <script src='js/stickyfill.min.js'></script>
+      <script src='js/scrollama.min.js'></script>
+      <script src="js/scroll.js"></script>
+      <script src="js/map.js"></script>
+      
+   </body>
+</html>
