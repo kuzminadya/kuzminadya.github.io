@@ -45,7 +45,7 @@ body {
    display: flex;
    flex-direction: column;
    font-family: 'OutputSansVariable-VF-Edu', 'OutputSansVariable', sans-serif;
-   font-size: 24px;
+   font-size: 20px;
    font-variation-settings: 'wght' 400;
    color: white;
    margin-bottom: 50px;
@@ -108,11 +108,16 @@ article {
 }
 
 article p, h2 {
-   max-width: 700px;
+   max-width: 600px;
 }
 
 article p {
    line-height: 1.4em;
+}
+
+#scrolly > article > div.interim-result.quote.text > div > h2
+{
+   padding-top: 3rem;
 }
 
 /* / */
@@ -171,7 +176,7 @@ figure div {
 
 .legend-noise {
    left: 58vw;
-   top: 80vh;
+   top: 95vh;
    position: sticky;
 }
 
@@ -195,7 +200,7 @@ figure div {
 
 .legend {
    position: absolute;
-   top: 80vh;
+   top: 95vh;
    right: 6vw;
 }
 
@@ -235,6 +240,10 @@ figure div {
    flex-wrap: wrap;
 }
 
+#scrolly > article > div.city-planners.text > div > div:nth-child(2) > img {
+   width: 25vw;
+}
+
 .papers-img {
    margin-top: 24px;
    padding-left: 3rem;
@@ -245,12 +254,12 @@ figure div {
    height: 100vh;
    display: flex;
    align-items: center;
-   font-size: 30px;
+   font-size: 24px;
    line-height: 1.25;
 }
 
 #scrolly > article > div.interim-result.quote.text > div {
-   padding: 5rem;
+   padding: 3rem;
    border: 3px solid white;
 }
 
@@ -262,8 +271,9 @@ figure div {
    margin-left: auto;
    z-index: 99;
    width: fit-content;
-   height: 380px;
+   height: 35vh;
    overflow-y: auto;
+   width: 40vw;
 }
 
 .traffic-density::-webkit-scrollbar-track {
@@ -300,7 +310,8 @@ video {
    font-family: 'BrunaTrial-Regular_webtrial', sans-serif;
    text-transform: uppercase;
    color: #170df8;
-   font-size: 120px;
+   font-size: 96px;
+   padding-right: 17vw;
 }
 
 .list {
@@ -324,4 +335,4 @@ video {
    margin-top: -5px;
     margin-right: -8px;
 }
-}
+

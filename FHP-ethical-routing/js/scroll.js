@@ -50,7 +50,11 @@ function handleStepEnter(response) {
    } else if (response.index == 5) {
     setMapStepWalkTwo();
    } else if (response.index == 6) {
-      setMapStepWalkThree();
+    setMapStepCaseOne();
+   } else if (response.index == 7) {
+    setMapStepCaseTwo();
+   } else if (response.index == 8) {
+    setMapStepCaseTwo();
    }
 
    step.classed('is-active', function(d, i) {
