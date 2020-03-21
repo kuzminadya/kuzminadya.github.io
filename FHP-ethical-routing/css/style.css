@@ -55,10 +55,8 @@ body {
 
 a {
    cursor: pointer;
-   /* color: #cdcb2b; */
-   /* color:#7FB2D6; */
-   /* color: #170df8; */
-   color: rgb(85, 95, 240);
+   /* color: rgb(85, 95, 240); */
+   color: #1252D6;
    text-decoration: none;
 }
 
@@ -94,11 +92,7 @@ h2 {
 .biggest-text {
    font-family: 'BrunaTrial-Regular_webtrial', sans-serif;
    text-transform: uppercase;
-   /* color: #E66A9B; */
-   /* color: #170df8; */
-   /* color: white; */
    font-size: 10vw;
-   /* padding: 10vw; */
    margin-left: 9vw;
 }
 
@@ -143,7 +137,6 @@ figure {
    -webkit-transform: translate3d(0, 0, 0);
    -moz-transform: translate3d(0, 0, 0);
    transform: translate3d(0, 0, 0);
-   /* background-color: #e6e6e6; */
 }
 
 figure div {
@@ -151,8 +144,6 @@ figure div {
    height: 100%;
    top: 0;
    left: 0;
-   /* font-size: 8rem;
-   font-weight: 900; */
    color: #fff;
 }
 
@@ -170,7 +161,6 @@ figure div {
 }
 
 .map-noise {
-   /* height: 100vh; */
    position: relative;
 }
 
@@ -266,7 +256,6 @@ figure div {
 .traffic-density {
    padding: 2rem;
    background-color: rgba(1, 1, 1, 0.7);
-   /* margin-left: 18vw; */
    margin-right: 4vw;
    margin-left: auto;
    z-index: 99;
@@ -276,12 +265,7 @@ figure div {
    width: 40vw;
 }
 
-.traffic-density::-webkit-scrollbar-track {
-   /* background-color: rgba(1, 1, 1, 0.7); */
-}
-
 .traffic-density::-webkit-scrollbar {
-   /* background-color: rgba(1, 1, 1, 0.7); */
    width: 15px;
 }
 
@@ -297,14 +281,6 @@ figure div {
    margin-left: 9vw;
 }
 
-video {
-   width: 54vw;
-   /* width: 100%;
-   height: 100%;
-   position: absolute;
-   bottom: -50px;
-   left: 0; */
-}
 
 .thanks {
    font-family: 'BrunaTrial-Regular_webtrial', sans-serif;
@@ -336,3 +312,71 @@ video {
     margin-right: -8px;
 }
 
+@media screen and (max-width: 800px) {
+   .title h1 {
+      padding-left: 18vw;
+   }
+   
+   .title img {
+      padding-left: 5vw;
+      max-width: 90vw;
+   
+   }
+   
+   .container {
+      font-family: 'OutputSansVariable-VF-Edu', 'OutputSansVariable', sans-serif;
+      font-size: 18px;
+      font-variation-settings: 'wght' 400;
+      color: white;
+   }
+
+   /* ARTICLE */
+   
+   h1,
+   h2,
+   h3 {
+      font-family: 'BrunaTrial-Regular_webtrial', sans-serif;
+      text-transform: uppercase;
+   }
+   
+   h1 {
+      font-size: 96px;
+      font-weight: 400;
+   }
+   
+   h2 {
+      font-size: 64px;
+      padding-top: 3rem;
+      margin-top: 0;
+      font-weight: 400;
+   }
+   
+   .biggest-text {
+      font-family: 'BrunaTrial-Regular_webtrial', sans-serif;
+      text-transform: uppercase;
+      font-size: 10vw;
+      margin-left: 5vw;
+   }
+   
+   article {
+      padding-bottom: 1.5rem;
+      position: relative;
+   }
+   
+   article p, h2 {
+      max-width: 480px;
+   }
+   
+   #scrolly > article > div.city-planners.text > div > div:nth-child(2) > img {
+      display: none;
+   }
+
+   .thanks {
+      font-size: 48px;
+   }
+
+   .interim-result {
+      font-size: 18px;
+   }
+
+ }

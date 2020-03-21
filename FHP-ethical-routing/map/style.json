@@ -1,0 +1,315 @@
+{
+    "version": 8,
+    "name": "sensitive_Berlin_final",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:sdk-support": {
+            "js": "0.54.0",
+            "android": "7.4.0",
+            "ios": "4.11.0"
+        },
+        "mapbox:groups": {
+            "30632625b70c3173124abbcef11187d9": {
+                "name": "noise",
+                "collapsed": false
+            },
+            "841c39e79533c65715a8635e6b29e682": {"name": "sensitive"}
+        },
+        "mapbox:uiParadigm": "layers",
+        "mapbox:print": {
+            "units": "in",
+            "width": 14.4,
+            "height": 10.24,
+            "resolution": "400",
+            "format": "png"
+        }
+    },
+    "center": [13.40709, 52.4748],
+    "zoom": 13.28,
+    "bearing": 0,
+    "pitch": 0,
+    "light": {"anchor": "viewport", "color": "hsl(0, 0%, 100%)"},
+    "sources": {
+        "mapbox://annela.2vdneajj": {
+            "url": "mapbox://annela.2vdneajj",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://annela.bqv19c57": {
+            "url": "mapbox://annela.bqv19c57",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://annela.4lzh7deo": {
+            "url": "mapbox://annela.4lzh7deo",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "mapbox://annela.70wfmhx8": {
+            "url": "mapbox://annela.70wfmhx8",
+            "type": "raster",
+            "tileSize": 256
+        },
+        "composite": {
+            "url": "mapbox://annela.ck7arjnuv00u42knydgq5v8l3-71gbw,annela.ck7aszu2v01zd2mqyut2ijknv-2ira3,annela.7u812g6i,mapbox.mapbox-streets-v8,annela.61zosjoh,annela.37cfbxdj,annela.7c85mitt,annela.cil3q63l,annela.alrjm2cg,annela.8j8uessf,annela.657rjjy1",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/annela/ck6shsinu0dkh1ip1u8atiabb/elkzprqy61hxmz6bwtgkk9x0s",
+    "glyphs": "mapbox://fonts/annela/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background copy 1",
+            "type": "background",
+            "layout": {},
+            "paint": {"background-color": "hsl(0, 0%, 0%)"}
+        },
+        {
+            "id": "background_white",
+            "type": "background",
+            "layout": {"visibility": "none"},
+            "paint": {"background-color": "hsl(0, 0%, 100%)"}
+        },
+        {
+            "id": "sealed_surface",
+            "type": "raster",
+            "source": "mapbox://annela.2vdneajj",
+            "minzoom": 10,
+            "layout": {},
+            "paint": {}
+        },
+        {
+            "id": "road",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "road",
+            "layout": {},
+            "paint": {"line-color": "#e0e0e0"}
+        },
+        {
+            "id": "water",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "water",
+            "maxzoom": 10,
+            "layout": {},
+            "paint": {"fill-color": "hsl(0, 3%, 75%)"}
+        },
+        {
+            "id": "water copy",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "water",
+            "minzoom": 11,
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsla(0, 0%, 51%, 0.6)"}
+        },
+        {
+            "id": "building",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "building",
+            "minzoom": 14,
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(204, 51%, 70%)"}
+        },
+        {
+            "id": "noise40-59db",
+            "type": "raster",
+            "metadata": {"mapbox:group": "30632625b70c3173124abbcef11187d9"},
+            "source": "mapbox://annela.70wfmhx8",
+            "layout": {"visibility": "none"},
+            "paint": {}
+        },
+        {
+            "id": "noise60-79db",
+            "type": "raster",
+            "metadata": {"mapbox:group": "30632625b70c3173124abbcef11187d9"},
+            "source": "mapbox://annela.4lzh7deo",
+            "layout": {"visibility": "none"},
+            "paint": {}
+        },
+        {
+            "id": "noise80db",
+            "type": "raster",
+            "metadata": {"mapbox:group": "30632625b70c3173124abbcef11187d9"},
+            "source": "mapbox://annela.bqv19c57",
+            "layout": {"visibility": "none"},
+            "paint": {}
+        },
+        {
+            "id": "routing_data_civity",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "google_driving-awas1i",
+            "layout": {},
+            "paint": {
+                "line-color": "hsla(336, 90%, 67%, 0.22)",
+                "line-opacity": 0.5,
+                "line-width": 3
+            }
+        },
+        {
+            "id": "child_playground_1",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_1-32hqpg",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "senior",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_2-5r9nhn",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "#1253d3"}
+        },
+        {
+            "id": "hospital_1",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_3-6j4ata",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "child_kindergarten_preschool_1",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_4-1qprc8",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "child_school",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_5-9tndhc",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "university",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_6-23fi0f",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "doctor",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_7-3umdw5",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "symbol_child_playground",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_1-32hqpg",
+            "layout": {
+                "icon-image": "icon_playground_white",
+                "icon-size": 0.16,
+                "visibility": "none"
+            },
+            "paint": {}
+        },
+        {
+            "id": "senior copy",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_2-5r9nhn",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "symbol_hospital",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_3-6j4ata",
+            "layout": {
+                "icon-image": "icon_hospital_white",
+                "icon-size": 0.16,
+                "visibility": "none"
+            },
+            "paint": {}
+        },
+        {
+            "id": "symbol_child_kindergarten_preschool",
+            "type": "symbol",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_4-1qprc8",
+            "layout": {
+                "icon-image": "icon_kinder_white",
+                "icon-size": 0.2,
+                "visibility": "none"
+            },
+            "paint": {}
+        },
+        {
+            "id": "child_school copy",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_5-9tndhc",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "university copy",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_6-23fi0f",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "doctor copy",
+            "type": "fill",
+            "metadata": {"mapbox:group": "841c39e79533c65715a8635e6b29e682"},
+            "source": "composite",
+            "source-layer": "export_7-3umdw5",
+            "layout": {"visibility": "none"},
+            "paint": {"fill-color": "hsl(220, 84%, 45%)"}
+        },
+        {
+            "id": "first-route",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "first-route",
+            "maxzoom": 14,
+            "layout": {"visibility": "none"},
+            "paint": {"line-color": "hsl(0, 98%, 56%)", "line-width": 5}
+        },
+        {
+            "id": "second-route",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "second-route",
+            "layout": {"visibility": "none"},
+            "paint": {"line-color": "hsl(210, 90%, 51%)", "line-width": 4}
+        }
+    ],
+    "created": "2020-02-18T23:01:52.908Z",
+    "id": "ck6shsinu0dkh1ip1u8atiabb",
+    "modified": "2020-03-02T20:51:35.239Z",
+    "owner": "annela",
+    "visibility": "private",
+    "draft": false
+}
