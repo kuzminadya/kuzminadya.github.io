@@ -1,5 +1,4 @@
 @font-face {
-    
     src: url('fonts/MogeeFont-Offset.woff2') format("woff2"),
          url('fonts/MogeeFont-Offset.woff') format("woff");
     font-family: 'MogeeFont-Offset';
@@ -33,6 +32,13 @@
     font-family: 'SpaceMono-Italic';
     font-style: italic;
     }      
+
+@font-face {
+    src: url('fonts/MogeeFontGX.ttf') format("ttf");
+    font-family: 'MogeeFontGX';
+    font-style: normal;
+    font-weight: normal;
+    }
 
 html {
     height: 100%;
@@ -77,6 +83,7 @@ h1 {
     /* color: #5C1B80; */
     /* color: #829DEC; */
     color: #623979;
+    /* color: #CDCB2B; */
     font-size: 96px;
     font-style: normal;
     font-weight: 400;
@@ -108,11 +115,30 @@ h2 {
 
 a{
     cursor: pointer;
-    /* color:#CDCB2B; */
-    /* color: #048EED; */
     color: #537ACC;
-    /* color: #5C1B80; */
     text-decoration: none; 
+}
+
+.var {
+    font-family: 'MogeeFontGX';
+}
+
+.var:hover { 
+    animation: change 5000ms infinite;
+    color: #829DEC;
+}
+
+@keyframes change {
+	0% {
+		font-variation-settings: 'PIXL' 0;
+	}
+	60% {
+		font-variation-settings: 'PIXL' 500;
+	}
+	
+	100% {
+		font-variation-settings: 'PIXL' 1000;
+	}
 }
 
 a:active {
@@ -124,9 +150,9 @@ a:hover {
 }
 
 .caption {
-    /* font-style: italic;  */
-    font-size: 22px;
-    font-family: 'SpaceMono-Italic';
+    font-style: italic; 
+    font-size: 17px;
+    /* font-family: 'SpaceMono-Italic'; */
 }
 
 .img-padding{
@@ -147,7 +173,7 @@ p {
     /* color: #EBF2F2; */
     /* color: #B4B9BF; */
     color: #DBE1E9;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 .text-width{
@@ -368,11 +394,12 @@ img.main-img{
 
 .title {
     font-family: 'MogeeFont-Offset';
-    grid-column: line2 / 12;
+    grid-column: line2 / line11;
     grid-row: 2;
     font-size: 150px;
     color: #829DEC;
     line-height: 0.9;
+    height: 100vw;
     /* padding-bottom: 20px; */
 }
 
@@ -386,4 +413,38 @@ img.main-img{
 
 .blue {
     color: #0265A9;
+}
+
+.about {
+    font-family: 'MogeeFont-Offset';
+    grid-column-start: line12;
+    grid-column-end: line13;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 150px;
+    color: #0E28A3;
+}
+
+.about .about-content {
+    display: none;
+}
+
+.about-content {
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    padding: 5vw;
+    top: 10vw;
+    right: 0;
+    background-color: #161116;
+    font-family: 'Space Mono';
+    font-size: 96px;
+}
+
+.about:hover {
+    color: #5C1B80; 
+}
+
+.about:hover .about-content {
+    display: block;
 }
