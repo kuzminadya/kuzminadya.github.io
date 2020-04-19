@@ -1,106 +1,155 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <link rel="stylesheet" href="css/mogeefont.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">  
-    <title>Mogeefont</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8"/>
-
-    </head>
-    <body>
-        <div class="container">
-            <header class="mogee-header">MOGEEFONT</header>   
-            <div class="intro text-width">
-                <p>
-                    Turning back, it’s hard for me to imagine that I could face the task of developing a pixel-art font for a game without using font editors and game-engines that support fonts. It all started with the fact that me and <a href="https://unsoundscapes.com/"> Andrey</a> took part in <a href="https://itch.io/jam/lowrezjam2016">#LOWREZJAM</a> game jam. The rules were to make a game with a resolution of 64×64 pixels. This spontaneous task was the starting point for creating an almost full-fledged bitmap font with kerning and ligatures support. 
-                </p>
-            </div>
-            <div class="mogee-iframe">
-                <iframe src="mogee"></iframe>
-            </div>
-            <div class="game-caption caption">
-                Click on the screen to play the game. Use arrow keys on a keyboard to move and jump.</div> 
-            <div class="first-sprite">
-                <figure class="first-sprite-figure img-padding">
-                    <img src="images/sprite.png" class="first-sprite-img">
-                    <figcaption class="first-sprite-fc caption">
-                        Typography was incredibly basic at the very beginnig:
-                        press to play and figures for a score.
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="itch text-width">
-                <p>
-                    The story goes back to 2016, when the first version of the game was completed within three days. 
-                </p>
-                <p>
-                    The first png sprite, which included the entire graphics of the game, looked quite simple. The typography that we used in the game was extremely basic. Only “press to play” and numbers for the score.
-                </p>
-                <p>
-                    The idea of developing a full-fledged font appeared later, when Andrey hold a talk at <a href="https://www.thestrangeloop.com/2017/elm-conf.html">elm-conf</a> and we decided to put slides inside the game. This defined the primary use case of the font: it had to be a part of the game, and had to fit the screen of a fairly low resolution.
-                </p>
-            </div>
-            <div class="sketches text-width">
-                <p> 
-                    Since the game takes place in the underworld, I’ve decided to make descenders disproportionately extended to ascenders to get the impression of a cave with stalactites. It was a naive idea, but I still like it. :) When every pixel plays a huge role, it was obvious to use a condensed font. Therefore, most of the lowercases had just 3 pixels width.
-
-                </p>
-                <img src="images/ps.png" class="main-img img-padding">
-                <p>
-                    The font was developed in Photoshop, where, using slices, I separated all the characters and saved each one as a png. Every glyph is named by its unicode and ligatures with several unicodes separated by underscore. As a result, I got a folder full of png files.
-                </p>
-            </div>
-            <div class="png-sprite text-width">
-                <img src="images/glyphs-sprite.png" class="main-img img-padding">
-                <p> 
-                    Next, Andrey collected all glyphs in a PNG sprite, from which it was possible to obtain information on the width, height and coordinates. What do we need this for? The font rendering system, that Andrey has written, uses WebGl to rasterise each glyph on a screen, that’s why one of the options was to upload every glyph as a separated image.
-                </p>
-            </div>
-            <figure class="vsc-list-glyphs text-width">
-                <img src="images/vsc-list-glyphs.png" class="main-img">
-                <figcaption class="vsc-game caption">
-                    This is how it looks in a text editor, a list of characters with coordinates and widths. 
-                </figcaption>
+   <head>
+      <link rel="stylesheet" href="css/mogeefont.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono" />
+      <title>Mogeefont</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charset="utf-8" />
+   </head>
+   <body>
+      <div class="container">
+         <a class="mogee-header" href="https://kuzminadya.github.io/video_games.html"
+            >←</a
+         >
+         <div class="intro text-width">
+            <h1>A Font for Mogee Game</h1>
+            <p>
+               Turning back, it’s hard for me to imagine that I could face the task of
+               developing a pixel-art font for a game without using font editors and
+               game-engines that support fonts. It all started with the fact that me and
+               <a href="https://unsoundscapes.com/"> Andrey</a> took part in
+               <a href="https://itch.io/jam/lowrezjam2016">#LOWREZJAM</a> game jam. The
+               rules were to make a game with a resolution of 64×64 pixels.
+            </p>
+         </div>
+         <div class="mogee-iframe">
+            <iframe src="mogee"></iframe>
+         </div>
+         <div class="game-caption caption">
+            Click on the screen to play the game. Use arrow keys on a keyboard to move and
+            jump.
+         </div>
+         <div class="first-sprite">
+            <figure class="first-sprite-figure img-padding">
+               <img src="images/sprite.png" class="first-sprite-img" />
+               <figcaption class="first-sprite-fc caption">
+                  Typography was incredibly basic at the very beginnig: press to play and
+                  figures for a score.
+               </figcaption>
             </figure>
-            
-            <div class="code text-width">
-                <p> 
-                    Using condensed font was a right decision, but still, there was a room for improvement. To reduce a space between characters we needed to create a system of ligatures and assign spacing and kerning. Ligature is a combination of two or more characters into a single glyph. Spacing and kerning are the processes of adjusting the distance between glyphs.
-                </p>
-                <p>
-                    First of all spacing was assigned. By default left side bearing is equal to 0 and right side bearing is equal to 1 pixel.
-                </p>  
-            </div>
-            <div class="kerning text-width">
-                <img src="images/vsc-kern.png" class="main-img vsc-code img-padding">
-                    <p>
-                    After that I defined kerning classes. Due to the fact that we didn’t have graphical user interface for this purpose, I’ve designated kerning classes and assigned kerning for the classes and pairs of glyphs directly inside the code.
-                </p>
-            </div> 
-            
-            <div class="elm-package text-width">
-                <img src="images/mogeefont.png" class="main-img img-padding">
-                <p>
-                    The result looks like this. Later I added Cyrillic as well. It is still work in progress.
-                </p>
-            </div>
-            <div class="demo text-width">
-                <p>
-                    To try Mogeefont begin to type text in the left text field.
-                </p>
-            </div> 
-            <div class="font-test-iframe"> 
-                <iframe class="font-test" frameborder="0" src="http://nadyakuzmina.com/mogeefont/" allowfullscreen=""></iframe>  
-            </div>
-            <div class="fin text-width">
-                <p>    
-                    Now the font is distributed as an <a href="https://package.elm-lang.org/packages/kuzminadya/mogeefont/latest">elm package</a>.
-                </p> 
-                <p>    
-                    <a href="https://github.com/kuzminadya/mogeefont">Mogeefont</a> as well as <a href="https://github.com/w0rm/elm-mogee">the game</a> itself are open source projects. You are welcome to contribute to both of them.
-                </p>  
-            </div>
-        </div>    
-    </body>
+         </div>
+         <div class="itch text-width">
+            <h2>The Story</h2>
+            <p>
+               We play a little yellow alien, who is being followed by a purple monster.
+               The goal is to pass as many screens as possible, while the speed of monster
+               progressively increases.
+            </p>
+            <p>
+               The first version of the game was completed within three days. The png
+               sprite, which included the entire graphics of the game, looked quite
+               simple. The typography that we used in the game was extremely basic. Only
+               “press to play” and numbers for the score.
+            </p>
+            <h2>Type Design</h2>
+            <p>
+               The idea of developing a full-fledged font appeared later, when Andrey held
+               a talk at
+               <a href="https://www.thestrangeloop.com/2017/elm-conf.html">elm-conf</a>
+               and we decided to put slides inside the game. This defined the primary use
+               case of the font: it had to be a part of the game, and had to fit the
+               screen of a fairly low resolution.
+            </p>
+            <p class="italic">And this is the first question that you should solve, namely how to find or create a font that will suit the game world, will be readable, and will meet your technical needs.</p>
+         </div>
+         <div class="sketches text-width">
+            <p>
+                Since the game took place in the underworld, I decided to make descenders disproportionately extended to ascenders. This created the impression of a cave with stalactites or subterranean tree roots.  Because of  the lack of space that we had on the screen with 64 px, I preferred condensed font to the one with normal width. Therefore, most of the lowercases had just 3 pixels width. For the same reason I choose on proportional instead of monospaced font, with supporting of kerning and ligatures. 
+            </p>
+            <img src="images/ps.png" class="main-img img-padding" />
+            <p>
+                The font was developed in Photoshop, where, using slices, I separated all the characters and saved each one as a png. Every glyph is named by its unicode and ligatures with several unicodes separated by underscore.
+                I should mention that PS is not a common software among game designers. Usually you are using Glyphs, Robofont or FL. But in our case there were no place where you can load your otf. ttf. or bitmap font. 
+            </p>
+         </div>
+         <div class="png-sprite text-width">
+            <img src="images/glyphs-sprite.png" class="main-img img-padding" />
+            <h2>Creating a Font File</h2>
+            <p>
+                All glyphs were collected in a PNG sprite, from which it was possible to obtain information on the width, height and coordinates. What do we need this for? The font rendering system, that Andrey has written, uses WebGl to rasterise each glyph on a screen, that’s why one of the options was to upload every glyph as a separated image.
+            </p>
+         </div>
+         <figure class="vsc-list-glyphs text-width">
+            <img src="images/vsc-list-glyphs.png" class="main-img" />
+            <figcaption class="vsc-game caption">
+               This is how it looks in a text editor, a list of characters with
+               coordinates and widths.
+            </figcaption>
+         </figure>
+
+         <div class="code text-width">
+             <h2>
+                Development
+             </h2>
+             <p>
+                Due to the fact that we didn’t have graphical user interface for this purpose, the second part of the work on the font took place directly in the text editor.  
+             </p>
+            <p>
+               Using condensed font was a right decision, but still, there was a room for
+               improvement. To reduce a space between characters we needed to create a
+               system of ligatures and assign spacing and kerning. Ligature is a
+               combination of two or more characters into a single glyph. Spacing and
+               kerning are the processes of adjusting the distance between glyphs.
+            </p>
+            <p>
+               First of all spacing was assigned. By default left side bearing is equal to
+               0 and right side bearing is equal to 1 pixel. After that I defined kerning classes. 
+            </p>
+         </div>
+         <div class="kerning text-width">
+            <img src="images/vsc-kern.png" class="main-img vsc-code img-padding" />
+            <p>
+                To improve rhythm of the text and to save a couple of pixels of the space I added ligatures to avoid optical big holes between glyphs.
+            </p>
+         </div>
+
+         <div class="elm-package text-width">
+            <img src="images/mogeefont.png" class="main-img img-padding" />
+            <p>
+                The result looks like this. Later I added Cyrillic as well. It is still work in progress.
+                To try Mogeefont begin to type text in the left text field.
+            </p>
+         </div>
+         <div class="demo text-width">
+            <p>
+               To try Mogeefont begin to type text in the left text field.
+            </p>
+         </div>
+         <div class="font-test-iframe">
+            <iframe
+               class="font-test"
+               frameborder="0"
+               src="http://nadyakuzmina.com/mogeefont/"
+               allowfullscreen=""
+            ></iframe>
+         </div>
+         <div class="fin text-width">
+             <h2>
+                License
+             </h2>
+            <p>
+               Now the font is distributed as an
+               <a href="https://package.elm-lang.org/packages/kuzminadya/mogeefont/latest"
+                  >elm package</a
+               >.
+            </p>
+            <p>
+               <a href="https://github.com/kuzminadya/mogeefont">Mogeefont</a> as well as
+               <a href="https://github.com/w0rm/elm-mogee">the game</a> itself are open
+               source projects. You are welcome to contribute to both of them.
+            </p>
+         </div>
+      </div>
+   </body>
 </html>

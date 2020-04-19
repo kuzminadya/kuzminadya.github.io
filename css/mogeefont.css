@@ -1,3 +1,39 @@
+@font-face {
+    
+    src: url('fonts/MogeeFont-Offset.woff2') format("woff2"),
+         url('fonts/MogeeFont-Offset.woff') format("woff");
+    font-family: 'MogeeFont-Offset';
+    font-style: normal;
+    /* font-weight: 250; */
+    }
+
+@font-face {
+    src: url('fonts/MogeeFont-SquarePixel.woff2') format("woff2"),
+        url('fonts/MogeeFont-SquarePixel.woff') format("woff");
+    font-family: 'MogeeFont-SquarePixel';
+    font-style: normal;
+    } 
+    
+@font-face {
+    src: url('fonts/SpaceGrotesk-Medium.woff2') format("woff2"),
+        url('fonts/SpaceGrotesk-Medium.woff') format("woff");
+    font-family: 'SpaceGrotesk-Medium';
+    font-style: normal;
+    }  
+    
+@font-face {
+    src: url('fonts/SpaceGrotesk-Regular.woff2') format("woff2"),
+        url('fonts/SpaceGrotesk-Regular.woff') format("woff");
+    font-family: 'SpaceGrotesk-Regular';
+    font-style: normal;
+    }  
+    
+@font-face {
+    src: url('fonts/SpaceMono-Italic.ttf') format("ttf");
+    font-family: 'SpaceMono-Italic';
+    font-style: italic;
+    }      
+
 html {
     height: 100%;
 }
@@ -8,6 +44,7 @@ body{
 }
 
 .container {
+    position: relative;
     display: grid;
     grid-template-columns:
         [first] 1fr 
@@ -29,18 +66,67 @@ body{
     font-family: 'Space Mono', monospace;
     font-size: 15px;
     color: white;
-    background-color: #161116;
+    /* background-color: #161116; */
+    background-color: #18011E;
+    /* background-color: #1E0225; */
     margin-bottom: 50px;
+}
+
+h1 {
+    font-family: 'MogeeFont-SquarePixel';
+    /* color: #5C1B80; */
+    /* color: #829DEC; */
+    color: #623979;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'MogeeFont-Offset';
+    /* color: #5C1B80; */
+    /* color: #829DEC; */
+    /* color: #623979; */
+    color: #DBE1E9;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    /* margin-top: 20px; */
+}
+
+
+.mogee-header {
+    font-family: 'MogeeFont-SquarePixel';
+    /* color: #5C1B80; */
+    /* color: #829DEC; */
+    color: #623979;
+    font-size: 96px;
+    position: fixed;
+    margin-top: 20px;
 }
 
 a{
     cursor: pointer;
-    color:#CDCB2B;
+    /* color:#CDCB2B; */
+    /* color: #048EED; */
+    color: #537ACC;
+    /* color: #5C1B80; */
     text-decoration: none; 
 }
 
+a:active {
+    color:#CDCB2B;
+}
+
+a:hover {
+    color: #CDCB2B;
+}
+
 .caption {
-    font-style: italic; 
+    /* font-style: italic;  */
+    font-size: 22px;
+    font-family: 'SpaceMono-Italic';
 }
 
 .img-padding{
@@ -48,20 +134,29 @@ a{
 }
 
 /* MOGEEFONT */
-header.mogee-header{
+/* header.mogee-header{
     grid-column: line2 / span 1;
     grid-row: 1;
     font-style: italic;
     font-family: 'Space Mono', monospace;
     font-size: 18px;  
+} */
+
+p {
+    line-height: 1.7;
+    /* color: #EBF2F2; */
+    /* color: #B4B9BF; */
+    color: #DBE1E9;
+    font-size: 22px;
 }
 
 .text-width{
     grid-column: line2 / 8;
+    /* line-height: 1.3; */
 }
 
 .intro{
-    grid-row: 2;
+    grid-row: 1 / 2;
     padding-bottom: 20px;
 }
 
@@ -267,4 +362,28 @@ img.main-img{
     .fin{
         grid-row: 14;
     }
+}
+
+/* ////////video-games */
+
+.title {
+    font-family: 'MogeeFont-Offset';
+    grid-column: line2 / 12;
+    grid-row: 2;
+    font-size: 150px;
+    color: #829DEC;
+    line-height: 0.9;
+    /* padding-bottom: 20px; */
+}
+
+.mogee-hl {
+    font-family: 'MogeeFont-SquarePixel';
+}
+
+.purple {
+    color: #5C1B80; 
+}
+
+.blue {
+    color: #0265A9;
 }
