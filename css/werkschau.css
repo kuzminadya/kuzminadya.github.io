@@ -132,50 +132,60 @@ ul {
    font-style: normal;
 }
 
+@font-face {
+   src: url('fonts/MogeeFont-Offset.woff2') format('woff2'),
+      url('fonts/MogeeFont-Offset.woff') format('woff');
+   font-family: 'MogeeFont-Offset';
+   font-style: normal;
+   /* font-weight: 250; */
+}
+
+@font-face {
+   src: url('fonts/MogeeFont-SquarePixel.woff2') format('woff2'),
+      url('fonts/MogeeFont-SquarePixel.woff') format('woff');
+   font-family: 'MogeeFont-SquarePixel';
+   font-style: normal;
+}
+
 /* html {
    font-size: 14px;
 } */
 
 @media (min-width: 700px) {
-    :root {
+   :root {
       font-size: calc(0.4375rem + ((1vw - 7px) * 0.914));
       min-height: 0vw;
-    }
-  }
-  @media (min-width: 2560px) {
-    :root {
+   }
+}
+@media (min-width: 2560px) {
+   :root {
       font-size: 24px;
-    }
-  }
+   }
+}
 
 h1 {
-   font-family: 'MogeeFont-SquarePixel';
-   /* color: #5C1B80; */
-   /* color: #829DEC; */
-   color: #623979;
-   /* color: #CDCB2B; */
-   font-size: 96px;
-   font-style: normal;
-   font-weight: 400;
-   margin-top: 20px;
 }
 
 h2 {
-   font-family: 'MogeeFont-Offset';
-   /* color: #5C1B80; */
-   /* color: #829DEC; */
-   /* color: #623979; */
-   color: #dbe1e9;
-   font-size: 60px;
-   font-style: normal;
-   font-weight: 400;
-   /* margin-top: 20px; */
 }
 
 a {
    cursor: pointer;
-   color: #537acc;
+   font-family: Redaction-Italic;
+   font-style: italic;
    text-decoration: none;
+}
+
+/* a:active {
+   color: #cdcb2b;
+}
+
+a:hover {
+   color: #cdcb2b;
+} */
+
+a:visited {
+   color: #000;
 }
 
 /*============================================================== */
@@ -249,6 +259,16 @@ body {
 
 .secondary {
    font-family: Redaction100-Regular;
+   position: relative;
+}
+
+.secondary:hover {
+   font-family: Redaction-Regular;
+   cursor: pointer;
+}
+
+.secondary:hover + .intro {
+   font-family: Redaction100-Regular !important;
 }
 
 .intro {
@@ -258,7 +278,7 @@ body {
    grid-row-end: row-line13;
    min-width: 480px;
    min-height: 370px;
-   font-size: 2rem;
+   font-size: 1.8rem;
    /* max-width: 100%; */
 }
 
@@ -272,6 +292,23 @@ body {
    /* max-width: 100%; */
 }
 
+.mogee-font {
+   font-family: 'MogeeFont-Offset';
+   font-size: 14rem;
+   color: #000;
+   position: absolute;
+   top: -2rem;
+   left: -7rem;
+   font-style: normal;
+   font-weight: 400;
+}
+
+.secondary-mogee-font:hover .mogee-font {
+   font-family: 'MogeeFont-SquarePixel';
+   font-size: 14rem;
+   color: #cecb2b;
+}
+
 .ethical-routing {
    grid-column-start: line18;
    grid-column-end: line22;
@@ -282,14 +319,47 @@ body {
    /* max-width: 100%; */
 }
 
+.secondary-ethical-routing .illustration {
+   position: absolute;
+   top: -21rem;
+   left: -12rem;
+}
+
+.secondary-ethical-routing .illustration img {
+   width: 26rem;
+   height: 21rem;
+}
+
+.secondary-ethical-routing .illustration .ethical-routing-color {
+   display: none;
+}
+
+.secondary-ethical-routing:hover .ethical-routing-bw {
+   display: none !important;
+}
+
+.secondary-ethical-routing:hover .ethical-routing-color {
+   display: block;
+}
+
 .gitread {
    grid-column-start: line19;
    grid-column-end: line23;
-   grid-row-start: row-line13;
-   grid-row-end: row-line17;
+   grid-row-start: row-line14;
+   grid-row-end: row-line18;
    min-width: 180px;
    min-height: 170px;
    /* max-width: 100%; */
+}
+
+.secondary-gitread .illustration {
+   position: absolute;
+   top: -19rem;
+   left: -8rem;
+}
+
+.secondary-gitread:hover .illustration svg path.gitread-line {
+   stroke: #c949e6;
 }
 
 .lucasfonts {
@@ -302,6 +372,24 @@ body {
    /* max-width: 100%; */
 }
 
+.secondary-lucasfonts .illustration {
+   position: absolute;
+   top: 0;
+   left: -17rem;
+}
+
+.secondary-lucasfonts .illustration .lufo-orange {
+   display: none;
+}
+
+.secondary-lucasfonts:hover .lufo-bw {
+   display: none !important;
+}
+
+.secondary-lucasfonts:hover .lufo-orange {
+   display: block;
+}
+
 .l4os {
    grid-column-start: line3;
    grid-column-end: line6;
@@ -310,6 +398,12 @@ body {
    min-width: 180px;
    min-height: 170px;
    /* max-width: 100%; */
+}
+
+.secondary-l4os .illustration {
+   position: absolute;
+   top: -13rem;
+   left: -10rem;
 }
 
 .var {
@@ -332,18 +426,4 @@ body {
    100% {
       font-variation-settings: 'PIXL' 1000;
    }
-}
-
-a:active {
-   color: #cdcb2b;
-}
-
-a:hover {
-   color: #cdcb2b;
-}
-
-.caption {
-   font-style: italic;
-   font-size: 17px;
-   /* font-family: 'SpaceMono-Italic'; */
 }
