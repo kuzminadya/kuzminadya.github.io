@@ -133,46 +133,46 @@ ul {
 }
 
 @font-face {
-    src: url('fonts/Redaction70-Italic.woff') format('woff2'),
-       url('fonts/Redaction70-Italic.woff2') format('woff');
-    font-family: 'Redaction70-Italic';
-    font-style: italic;
- }
- 
- @font-face {
-    src: url('fonts/Redaction70-Regular.woff2') format('woff2'),
-       url('fonts/Redaction70-Regular.woff') format('woff');
-    font-family: 'Redaction70-Regular';
-    font-style: normal;
- }
+   src: url('fonts/Redaction70-Italic.woff') format('woff2'),
+      url('fonts/Redaction70-Italic.woff2') format('woff');
+   font-family: 'Redaction70-Italic';
+   font-style: italic;
+}
 
 @font-face {
-    src: url('fonts/Redaction50-Italic.woff') format('woff2'),
-       url('fonts/Redaction50-Italic.woff2') format('woff');
-    font-family: 'Redaction50-Italic';
-    font-style: italic;
- }
- 
- @font-face {
-    src: url('fonts/Redaction50-Regular.woff2') format('woff2'),
-       url('fonts/Redaction50-Regular.woff') format('woff');
-    font-family: 'Redaction50-Regular';
-    font-style: normal;
- }
+   src: url('fonts/Redaction70-Regular.woff2') format('woff2'),
+      url('fonts/Redaction70-Regular.woff') format('woff');
+   font-family: 'Redaction70-Regular';
+   font-style: normal;
+}
 
- @font-face {
-    src: url('fonts/Redaction35-Italic.woff') format('woff2'),
-       url('fonts/Redaction35-Italic.woff2') format('woff');
-    font-family: 'Redaction35-Italic';
-    font-style: italic;
- }
- 
- @font-face {
-    src: url('fonts/Redaction35-Regular.woff2') format('woff2'),
-       url('fonts/Redaction35-Regular.woff') format('woff');
-    font-family: 'Redaction35-Regular';
-    font-style: normal;
- }
+@font-face {
+   src: url('fonts/Redaction50-Italic.woff') format('woff2'),
+      url('fonts/Redaction50-Italic.woff2') format('woff');
+   font-family: 'Redaction50-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction50-Regular.woff2') format('woff2'),
+      url('fonts/Redaction50-Regular.woff') format('woff');
+   font-family: 'Redaction50-Regular';
+   font-style: normal;
+}
+
+@font-face {
+   src: url('fonts/Redaction35-Italic.woff') format('woff2'),
+      url('fonts/Redaction35-Italic.woff2') format('woff');
+   font-family: 'Redaction35-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction35-Regular.woff2') format('woff2'),
+      url('fonts/Redaction35-Regular.woff') format('woff');
+   font-family: 'Redaction35-Regular';
+   font-style: normal;
+}
 
 @font-face {
    src: url('fonts/MogeeFont-Offset.woff2') format('woff2'),
@@ -193,7 +193,7 @@ ul {
    font-size: 14px;
 } */
 
-@media (min-width: 700px) {
+/* @media (min-width: 700px) {
    :root {
       font-size: calc(0.4375rem + ((1vw - 7px) * 0.914));
       min-height: 0vw;
@@ -202,6 +202,18 @@ ul {
 @media (min-width: 2560px) {
    :root {
       font-size: 24px;
+   }
+} */
+
+@media (min-width: 320px) {
+   :root {
+      font-size: calc(0.75rem + ((1vw - 3.2px) * 0.2679));
+      min-height: 0vw;
+   }
+}
+@media (min-width: 2560px) {
+   :root {
+      font-size: 18px;
    }
 }
 
@@ -216,10 +228,11 @@ a {
    font-family: Redaction-Italic;
    font-style: italic;
    text-decoration: none;
+   color: #000;
 }
 
 p {
-    padding-bottom: .7rem;
+   padding-bottom: 0.7rem;
 }
 
 a:active {
@@ -318,16 +331,16 @@ body {
 }
 
 .secondary:hover ~ .intro a {
-    font-family: Redaction100-Italic !important;
- }
+   font-family: Redaction100-Italic !important;
+}
 
 .secondary a {
-font-family: Redaction100-Italic;
+   font-family: Redaction100-Italic;
 }
 
 .secondary:hover a {
-    font-family: Redaction-Italic !important;
- }
+   font-family: Redaction-Italic !important;
+}
 
 .intro {
    grid-column-start: line7;
@@ -412,7 +425,7 @@ font-family: Redaction100-Italic;
 
 .secondary-gitread .illustration {
    position: absolute;
-   top: -19rem;
+   top: -20rem;
    left: -8rem;
 }
 
@@ -464,15 +477,6 @@ font-family: Redaction100-Italic;
    left: -10rem;
 }
 
-.var {
-   font-family: 'MogeeFontGX';
-}
-
-.var:hover {
-   animation: change 5000ms infinite;
-   color: #829dec;
-}
-
 @keyframes change {
    0% {
       font-variation-settings: 'PIXL' 0;
@@ -486,46 +490,145 @@ font-family: Redaction100-Italic;
    }
 }
 
+@media (max-width: 900px) {
+   .illustration {
+      display: none;
+   }
+
+   .intro {
+      grid-column-start: line2;
+      grid-column-end: line18;
+      grid-row-start: row-line2;
+      grid-row-end: row-line3;
+      min-width: 30rem;
+      min-height: 24rem;
+      font-size: 1.3rem;
+      /* max-width: 100%; */
+   }
+
+   .mogee {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line4;
+      grid-row-end: row-line5;
+      min-width: 25rem;
+      min-height: 4rem;
+      /* max-width: 100%; */
+   }
+
+   .ethical-routing {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line6;
+      grid-row-end: row-line7;
+      min-width: 25rem;
+      min-height: 7rem;
+      /* max-width: 100%; */
+   }
+
+   .gitread {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line7;
+      grid-row-end: row-line8;
+      min-width: 25rem;
+      min-height: 7rem;
+      /* max-width: 100%; */
+   }
+
+   .lucasfonts {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line9;
+      grid-row-end: row-line12;
+      min-width: 25rem;
+      min-height: 11rem;
+      /* max-width: 100%; */
+   }
+
+   .l4os {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line13;
+      grid-row-end: row-line18;
+      min-width: 25rem;
+      min-height: 10rem;
+      /* max-width: 100%; */
+   }
+
+   .secondary__description {
+      padding: 0 !important;
+   }
+
+   .secondary {
+      font-family: Redaction-Regular;
+   }
+
+   .secondary:hover {
+      font-family: Redaction-Regular;
+      cursor: default;
+   }
+
+   .secondary:hover ~ .intro {
+      font-family: Redaction-Regular !important;
+   }
+
+   .secondary:hover ~ .intro a {
+      font-family: Redaction-Italic !important;
+   }
+
+   .secondary a {
+      font-family: Redaction-Italic;
+   }
+
+   .secondary:hover a {
+      font-family: Redaction-Italic !important;
+   }
+   .secondary__description input[type='checkbox']:checked ~ .collapsible {
+    display: none !important;
+ }
+}
+
 /*============================================================== */
 /*     T E X T    */
 /*============================================================== */
 
 /* expand/collapse based on https://stackoverflow.com/questions/28585064/collapse-and-expand-elements-with-css */
 
-input[type="checkbox"] {
-    width:100%;
-    height:200%;
-    position:absolute;
-    left:0;
-    top:0;
-    opacity:0;
-    z-index:10;
-    /* cursor:pointer; */
+input[type='checkbox'] {
+   width: 100%;
+   height: 200%;
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+   z-index: 10;
+   /* cursor:pointer; */
 }
 
 .secondary__description {
-    position: relative;
-    background-color: #fff;
-    padding: 0 1rem 1rem;
+   position: relative;
+   background-color: #fff;
+   padding: 0 1rem 1rem;
 }
 
 .secondary__description span {
-    display:inline-block;
-    transition:all .3s ease;
+   display: inline-block;
+   transition: all 0.3s ease;
 }
 
-.secondary__description input[type="checkbox"]:checked ~ span {
-    display: block;
+.secondary__description input[type='checkbox']:checked ~ span {
+   display: block;
 }
 
 .secondary__description .collapsible {
-    display: none;
+   display: none;
 }
 
-.secondary__description input[type="checkbox"]:checked ~ .collapsible {
-    display: none;
+.secondary__description input[type='checkbox']:checked ~ .collapsible {
+   display: none;
 }
 
-.secondary__description input[type="checkbox"]:checked ~ .collapsible {
-    display: block;
+.secondary__description input[type='checkbox']:checked ~ .collapsible {
+   display: block;
 }
