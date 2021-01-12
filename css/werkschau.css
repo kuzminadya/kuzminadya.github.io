@@ -565,7 +565,7 @@ body {
    .l4os {
       grid-column-start: line2;
       grid-column-end: line15;
-      grid-row-start: row-line13;
+      grid-row-start: row-line14;
       grid-row-end: row-line18;
       min-width: 25rem;
       min-height: 10rem;
