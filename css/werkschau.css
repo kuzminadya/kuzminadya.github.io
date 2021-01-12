@@ -133,6 +133,48 @@ ul {
 }
 
 @font-face {
+    src: url('fonts/Redaction70-Italic.woff') format('woff2'),
+       url('fonts/Redaction70-Italic.woff2') format('woff');
+    font-family: 'Redaction70-Italic';
+    font-style: italic;
+ }
+ 
+ @font-face {
+    src: url('fonts/Redaction70-Regular.woff2') format('woff2'),
+       url('fonts/Redaction70-Regular.woff') format('woff');
+    font-family: 'Redaction70-Regular';
+    font-style: normal;
+ }
+
+@font-face {
+    src: url('fonts/Redaction50-Italic.woff') format('woff2'),
+       url('fonts/Redaction50-Italic.woff2') format('woff');
+    font-family: 'Redaction50-Italic';
+    font-style: italic;
+ }
+ 
+ @font-face {
+    src: url('fonts/Redaction50-Regular.woff2') format('woff2'),
+       url('fonts/Redaction50-Regular.woff') format('woff');
+    font-family: 'Redaction50-Regular';
+    font-style: normal;
+ }
+
+ @font-face {
+    src: url('fonts/Redaction35-Italic.woff') format('woff2'),
+       url('fonts/Redaction35-Italic.woff2') format('woff');
+    font-family: 'Redaction35-Italic';
+    font-style: italic;
+ }
+ 
+ @font-face {
+    src: url('fonts/Redaction35-Regular.woff2') format('woff2'),
+       url('fonts/Redaction35-Regular.woff') format('woff');
+    font-family: 'Redaction35-Regular';
+    font-style: normal;
+ }
+
+@font-face {
    src: url('fonts/MogeeFont-Offset.woff2') format('woff2'),
       url('fonts/MogeeFont-Offset.woff') format('woff');
    font-family: 'MogeeFont-Offset';
@@ -267,9 +309,13 @@ body {
    cursor: pointer;
 }
 
-.secondary:hover + .intro {
+.secondary:hover ~ .intro {
    font-family: Redaction100-Regular !important;
 }
+
+.secondary:hover ~ .intro a {
+    font-family: Redaction100-Italic !important;
+ }
 
 .intro {
    grid-column-start: line7;
