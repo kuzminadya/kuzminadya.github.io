@@ -324,14 +324,17 @@ body {
 .secondary:hover {
    font-family: Redaction-Regular;
    cursor: pointer;
+   transition: all 0.3s ease;
 }
 
 .secondary:hover ~ .intro {
    font-family: Redaction100-Regular !important;
+   transition: all 0.3s ease;
 }
 
 .secondary:hover ~ .intro a {
    font-family: Redaction100-Italic !important;
+   transition: all 0.3s ease;
 }
 
 .secondary a {
@@ -340,6 +343,7 @@ body {
 
 .secondary:hover a {
    font-family: Redaction-Italic !important;
+   transition: all 0.3s ease;
 }
 
 .intro {
@@ -378,6 +382,7 @@ body {
    font-family: 'MogeeFont-SquarePixel';
    font-size: 14rem;
    color: #cecb2b;
+   transition: all 0.3s ease;
 }
 
 .ethical-routing {
@@ -403,14 +408,17 @@ body {
 
 .secondary-ethical-routing .illustration .ethical-routing-color {
    display: none;
+   transition: all 0.5s ease;
 }
 
 .secondary-ethical-routing:hover .ethical-routing-bw {
    display: none !important;
+   transition: all 0.5s ease;
 }
 
 .secondary-ethical-routing:hover .ethical-routing-color {
    display: block;
+   transition: all 0.5s ease;
 }
 
 .gitread {
@@ -431,6 +439,7 @@ body {
 
 .secondary-gitread:hover .illustration svg path.gitread-line {
    stroke: #c949e6;
+   transition: all 0.3s ease;
 }
 
 .lucasfonts {
@@ -455,10 +464,12 @@ body {
 
 .secondary-lucasfonts:hover .lufo-bw {
    display: none !important;
+   transition: all 0.3s ease;
 }
 
 .secondary-lucasfonts:hover .lufo-orange {
    display: block;
+   transition: all 0.3s ease;
 }
 
 .l4os {
@@ -567,6 +578,7 @@ body {
    .secondary:hover {
       font-family: Redaction-Regular;
       cursor: default;
+      transition: all 0.3s ease;
    }
 
    .secondary:hover ~ .intro {
