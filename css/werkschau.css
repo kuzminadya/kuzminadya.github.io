@@ -368,7 +368,8 @@ body {
 }
 
 .mogee-font {
-   font-family: 'MogeeFont-Offset';
+   font-family: 'MogeeFont-Offset', monospace;
+   user-select: none;
    font-size: 14rem;
    color: #000;
    position: absolute;
@@ -379,7 +380,8 @@ body {
 }
 
 .secondary-mogee-font:hover .mogee-font {
-   font-family: 'MogeeFont-SquarePixel';
+   font-family: 'MogeeFont-SquarePixel', monospace;
+   user-select: none;
    font-size: 14rem;
    color: #cecb2b;
    transition: all 0.3s ease;
