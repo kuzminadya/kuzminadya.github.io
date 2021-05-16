@@ -603,9 +603,9 @@ body {
    .secondary:hover a {
       font-family: Redaction-Italic !important;
    }
-   .secondary__description input[type='checkbox']:checked ~ .collapsible {
+   /* .secondary__description input[type='checkbox']:checked ~ .collapsible {
     display: none !important;
- }
+ } */
 }
 
 /*============================================================== */
@@ -640,7 +640,7 @@ input[type='checkbox'] {
    display: block;
 }
 
-.secondary__description .collapsible {
+/* .secondary__description .collapsible {
    display: none;
 }
 
@@ -650,4 +650,4 @@ input[type='checkbox'] {
 
 .secondary__description input[type='checkbox']:checked ~ .collapsible {
    display: block;
-}
+} */
