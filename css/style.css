@@ -1,0 +1,653 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+figure,
+figcaption,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font-weight: inherit;
+   font-style: inherit;
+   font-size: 100%;
+   font-family: inherit;
+   vertical-align: baseline;
+}
+
+html,
+body {
+   height: 100vh;
+}
+
+::selection {
+   background-color: #d0d0d0;
+}
+
+abbr[title] {
+   border-bottom: 1px dotted #999 !important;
+   cursor: help;
+}
+
+*:focus {
+   outline: 0;
+}
+
+ul {
+   list-style-type: none;
+}
+
+/* Apply a natural box layout model to all elements */
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/*============================================================== */
+/*     T Y P E     */
+/*============================================================== */
+
+@font-face {
+   src: url('fonts/Redaction-Regular.woff2') format('woff2'),
+      url('fonts/Redaction-Regular.woff') format('woff');
+   font-family: 'Redaction-Regular';
+   font-style: normal;
+}
+
+@font-face {
+   src: url('fonts/Redaction-Italic.woff2') format('woff2'),
+      url('fonts/Redaction-Italic.woff') format('woff');
+   font-family: 'Redaction-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction100-Italic.woff') format('woff2'),
+      url('fonts/Redaction100-Italic.woff2') format('woff');
+   font-family: 'Redaction100-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction100-Regular.woff2') format('woff2'),
+      url('fonts/Redaction100-Regular.woff') format('woff');
+   font-family: 'Redaction100-Regular';
+   font-style: normal;
+}
+
+@font-face {
+   src: url('fonts/Redaction70-Italic.woff') format('woff2'),
+      url('fonts/Redaction70-Italic.woff2') format('woff');
+   font-family: 'Redaction70-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction70-Regular.woff2') format('woff2'),
+      url('fonts/Redaction70-Regular.woff') format('woff');
+   font-family: 'Redaction70-Regular';
+   font-style: normal;
+}
+
+@font-face {
+   src: url('fonts/Redaction50-Italic.woff') format('woff2'),
+      url('fonts/Redaction50-Italic.woff2') format('woff');
+   font-family: 'Redaction50-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction50-Regular.woff2') format('woff2'),
+      url('fonts/Redaction50-Regular.woff') format('woff');
+   font-family: 'Redaction50-Regular';
+   font-style: normal;
+}
+
+@font-face {
+   src: url('fonts/Redaction35-Italic.woff') format('woff2'),
+      url('fonts/Redaction35-Italic.woff2') format('woff');
+   font-family: 'Redaction35-Italic';
+   font-style: italic;
+}
+
+@font-face {
+   src: url('fonts/Redaction35-Regular.woff2') format('woff2'),
+      url('fonts/Redaction35-Regular.woff') format('woff');
+   font-family: 'Redaction35-Regular';
+   font-style: normal;
+}
+
+@font-face {
+   src: url('fonts/MogeeFont-Offset.woff2') format('woff2'),
+      url('fonts/MogeeFont-Offset.woff') format('woff');
+   font-family: 'MogeeFont-Offset';
+   font-style: normal;
+   /* font-weight: 250; */
+}
+
+@font-face {
+   src: url('fonts/MogeeFont-SquarePixel.woff2') format('woff2'),
+      url('fonts/MogeeFont-SquarePixel.woff') format('woff');
+   font-family: 'MogeeFont-SquarePixel';
+   font-style: normal;
+}
+
+/* html {
+   font-size: 14px;
+} */
+
+/* @media (min-width: 700px) {
+   :root {
+      font-size: calc(0.4375rem + ((1vw - 7px) * 0.914));
+      min-height: 0vw;
+   }
+}
+@media (min-width: 2560px) {
+   :root {
+      font-size: 24px;
+   }
+} */
+
+@media (min-width: 320px) {
+   :root {
+      font-size: calc(0.75rem + ((1vw - 3.2px) * 0.2679));
+      min-height: 0vw;
+   }
+}
+@media (min-width: 2560px) {
+   :root {
+      font-size: 18px;
+   }
+}
+
+h1 {
+}
+
+h2 {
+}
+
+a {
+   cursor: pointer;
+   font-family: Redaction-Italic;
+   font-style: italic;
+   text-decoration: none;
+   color: #000;
+}
+
+p {
+   padding-bottom: 0.7rem;
+}
+
+a:active {
+   color: #000;
+}
+
+a:hover {
+   color: #000;
+}
+
+a:visited {
+   color: #000;
+}
+
+/*============================================================== */
+/*     L A Y O U T     */
+/*============================================================== */
+
+/* html {
+    height: 100%;
+} */
+
+body {
+   height: 100%;
+   background-color: #fff;
+}
+
+.container {
+   /* grid container settings */
+   display: grid;
+   grid-template-columns:
+      [first] 1fr
+      [line2] 1fr
+      [line3] 1fr
+      [line4] 1fr
+      [line5] 1fr
+      [line6] 1fr
+      [line7] 1fr
+      [line8] 1fr
+      [line9] 1fr
+      [line10] 1fr
+      [line11] 1fr
+      [line12] 1fr
+      [line13] 1fr
+      [line14] 1fr
+      [line15] 1fr
+      [line16] 1fr
+      [line17] 1fr
+      [line18] 1fr
+      [line19] 1fr
+      [line20] 1fr
+      [line21] 1fr
+      [line22] 1fr
+      [line23] 1fr
+      [line24] 1fr
+      [end];
+   grid-template-rows:
+      [row-start] 1fr
+      [row-line2] 1fr
+      [row-line3] 1fr
+      [row-line4] 1fr
+      [row-line5] 1fr
+      [row-line6] 1fr
+      [row-line7] 1fr
+      [row-line8] 1fr
+      [row-line9] 1fr
+      [row-line10] 1fr
+      [row-line11] 1fr
+      [row-line12] 1fr
+      [row-line13] 1fr
+      [row-line14] 1fr
+      [row-line15] 1fr
+      [row-line16] 1fr
+      [row-line17] 1fr
+      [row-line18] 1fr
+      [row-end];
+   /* grid-template-rows: auto 1fr auto; */
+   color: #000;
+   background-color: #fff;
+   font-family: Redaction-Regular;
+   height: 100vh;
+}
+
+.secondary {
+   font-family: Redaction100-Regular;
+   position: relative;
+}
+
+.secondary:hover {
+   font-family: Redaction-Regular;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.secondary:hover ~ .intro {
+   font-family: Redaction100-Regular !important;
+   transition: all 0.3s ease;
+}
+
+.secondary:hover ~ .intro a {
+   font-family: Redaction100-Italic !important;
+   transition: all 0.3s ease;
+}
+
+.secondary a {
+   font-family: Redaction100-Italic;
+}
+
+.secondary:hover a {
+   font-family: Redaction-Italic !important;
+   transition: all 0.3s ease;
+}
+
+.intro {
+   grid-column-start: line7;
+   grid-column-end: line15;
+   grid-row-start: row-line6;
+   grid-row-end: row-line13;
+   min-width: 480px;
+   min-height: 370px;
+   font-size: 1.5rem;
+   /* max-width: 100%; */
+}
+
+.mogee {
+   grid-column-start: line5;
+   grid-column-end: line9;
+   grid-row-start: row-line2;
+   grid-row-end: row-line5;
+   min-width: 180px;
+   min-height: 170px;
+   /* max-width: 100%; */
+}
+
+.mogee-font {
+   font-family: 'MogeeFont-Offset', monospace;
+   user-select: none;
+   font-size: 14rem;
+   color: #000;
+   position: absolute;
+   top: -2rem;
+   left: -7rem;
+   font-style: normal;
+   font-weight: 400;
+}
+
+.secondary-mogee-font:hover .mogee-font {
+   font-family: 'MogeeFont-SquarePixel', monospace;
+   user-select: none;
+   font-size: 14rem;
+   color: #cecb2b;
+   transition: all 0.3s ease;
+}
+
+.ethical-routing {
+   grid-column-start: line18;
+   grid-column-end: line22;
+   grid-row-start: row-line6;
+   grid-row-end: row-line9;
+   min-width: 230px;
+   min-height: 170px;
+   /* max-width: 100%; */
+}
+
+.secondary-ethical-routing .illustration {
+   position: absolute;
+   top: -21rem;
+   left: -12rem;
+}
+
+.secondary-ethical-routing .illustration img {
+   width: 26rem;
+   height: 21rem;
+}
+
+.secondary-ethical-routing .illustration .ethical-routing-color {
+   display: none;
+   transition: all 0.5s ease;
+}
+
+.secondary-ethical-routing:hover .ethical-routing-bw {
+   display: none !important;
+   transition: all 0.5s ease;
+}
+
+.secondary-ethical-routing:hover .ethical-routing-color {
+   display: block;
+   transition: all 0.5s ease;
+}
+
+.gitread {
+   grid-column-start: line20;
+   grid-column-end: line25;
+   grid-row-start: row-line14;
+   grid-row-end: row-line19;
+   min-width: 180px;
+   min-height: 170px;
+   /* max-width: 100%; */
+}
+
+.secondary-gitread .illustration {
+   position: absolute;
+   top: -20rem;
+   left: -8rem;
+}
+
+.secondary-gitread:hover .illustration svg path.gitread-line {
+   stroke: #c949e6;
+   transition: all 0.4s ease;
+}
+
+.secondary-l4os:hover .illustration svg path.loop {
+    fill: #0606FF;
+    transition: all 0.4s ease;
+ }
+
+.lucasfonts {
+   grid-column-start: line13;
+   grid-column-end: line17;
+   grid-row-start: row-line15;
+   grid-row-end: row-line18;
+   min-width: 180px;
+   min-height: 170px;
+   /* max-width: 100%; */
+}
+
+.secondary-lucasfonts .illustration {
+   position: absolute;
+   top: 0;
+   left: -17rem;
+}
+
+.secondary-lucasfonts .illustration .lufo-orange {
+   display: none;
+}
+
+.secondary-lucasfonts:hover .lufo-bw {
+   display: none !important;
+   transition: all 0.3s ease;
+}
+
+.secondary-lucasfonts:hover .lufo-orange {
+   display: block;
+   transition: all 0.3s ease;
+}
+
+.l4os {
+   grid-column-start: line4;
+   grid-column-end: line8;
+   grid-row-start: row-line14;
+   grid-row-end: row-line18;
+   min-width: 180px;
+   min-height: 170px;
+   /* max-width: 100%; */
+}
+
+.secondary-l4os .illustration {
+   position: absolute;
+   top: -13rem;
+   left: -10rem;
+}
+
+@keyframes change {
+   0% {
+      font-variation-settings: 'PIXL' 0;
+   }
+   60% {
+      font-variation-settings: 'PIXL' 500;
+   }
+
+   100% {
+      font-variation-settings: 'PIXL' 1000;
+   }
+}
+
+@media (max-width: 900px) {
+   .illustration {
+      display: none;
+   }
+
+   .intro {
+      grid-column-start: line2;
+      grid-column-end: line18;
+      grid-row-start: row-line2;
+      grid-row-end: row-line3;
+      min-width: 30rem;
+      min-height: 24rem;
+      font-size: 1.3rem;
+      /* max-width: 100%; */
+   }
+
+   .mogee {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line4;
+      grid-row-end: row-line5;
+      min-width: 25rem;
+      min-height: 4rem;
+      /* max-width: 100%; */
+   }
+
+   .ethical-routing {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line6;
+      grid-row-end: row-line7;
+      min-width: 25rem;
+      min-height: 7rem;
+      /* max-width: 100%; */
+   }
+
+   .gitread {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line7;
+      grid-row-end: row-line8;
+      min-width: 25rem;
+      min-height: 7rem;
+      /* max-width: 100%; */
+   }
+
+   .lucasfonts {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line9;
+      grid-row-end: row-line12;
+      min-width: 25rem;
+      min-height: 11rem;
+      /* max-width: 100%; */
+   }
+
+   .l4os {
+      grid-column-start: line2;
+      grid-column-end: line15;
+      grid-row-start: row-line14;
+      grid-row-end: row-line18;
+      min-width: 25rem;
+      min-height: 10rem;
+      /* max-width: 100%; */
+   }
+
+   .secondary__description {
+      padding: 0 !important;
+   }
+
+   .secondary {
+      font-family: Redaction-Regular;
+   }
+
+   .secondary:hover {
+      font-family: Redaction-Regular;
+      cursor: default;
+      transition: all 0.3s ease;
+   }
+
+   .secondary:hover ~ .intro {
+      font-family: Redaction-Regular !important;
+   }
+
+   .secondary:hover ~ .intro a {
+      font-family: Redaction-Italic !important;
+   }
+
+   .secondary a {
+      font-family: Redaction-Italic;
+   }
+
+   .secondary:hover a {
+      font-family: Redaction-Italic !important;
+   }
+   .secondary__description input[type='checkbox']:checked ~ .collapsible {
+    display: none !important;
+ }
+}
+
+/*============================================================== */
+/*     T E X T    */
+/*============================================================== */
+
+/* expand/collapse based on https://stackoverflow.com/questions/28585064/collapse-and-expand-elements-with-css */
+
+input[type='checkbox'] {
+   width: 100%;
+   height: 200%;
+   position: absolute;
+   left: 0;
+   top: 0;
+   opacity: 0;
+   z-index: 10;
+   /* cursor:pointer; */
+}
+
+.secondary__description {
+   position: relative;
+   background-color: #fff;
+   padding: 0 1rem 1rem;
+}
+
+.secondary__description span {
+   display: inline-block;
+   transition: all 0.3s ease;
+}
+
+.secondary__description input[type='checkbox']:checked ~ span {
+   display: block;
+}
+
+.secondary__description .collapsible {
+   display: none;
+}
+
+.secondary__description input[type='checkbox']:checked ~ .collapsible {
+   display: none;
+}
+
+.secondary__description input[type='checkbox']:checked ~ .collapsible {
+   display: block;
+}
