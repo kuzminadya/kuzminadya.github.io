@@ -495,7 +495,12 @@ body {
    }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+   .container{
+      overflow-x: hidden;
+      height: 100%;
+   }
+   
 
    p {
       max-width: 95vw;
@@ -515,11 +520,10 @@ body {
       grid-column-end: line22;
       grid-row-start: row-line3;
       grid-row-end: row-line4;
-      padding-top: 2rem;
    }
 
    .mogee-font {
-      top: -1rem;
+      top: -2rem;
    }
 
    .ethical-routing {
@@ -554,29 +558,30 @@ body {
       grid-column-end: line22;
       grid-row-start: row-line8;
       grid-row-end: row-line9;
-      padding-top: 2rem;
+      padding-top: 3rem;
    }
 
    .secondary-lucasfonts .illustration {
       position: absolute;
-      top: 0;
-      left: -17rem;
+      top: 1rem;
+      left: -18rem;
       transform: scale(0.75);
   }
 
    .l4os {
-      grid-column-start: line4;
-      grid-column-end: line16;
+      grid-column-start: line13;
+      grid-column-end: line22;
       grid-row-start: row-line9;
       grid-row-end: row-line10;
-      padding-top: 7rem;
+      padding-top: 5rem;
    }
 
    .secondary-l4os .illustration {
       position: absolute;
-      top: -4rem;
-      left: 14rem;
-      transform: scale(0.75);
+    top: 2rem;
+    left: -18rem;
+    transform: scale(0.75);
+    /* z-index: -1; */
   }   
 
    .secondary__description {
@@ -589,7 +594,7 @@ body {
 
    .secondary:hover {
       font-family: Redaction-Regular;
-      cursor: default;
+      cursor: default;  
       transition: all 0.3s ease;
    }
 
